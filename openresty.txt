@@ -1,0 +1,2182 @@
+# logs
+
+$ ./configure --with-cc=gcc
+platform: msys (msys)
+cp -rp bundle/ build
+cd build
+cd LuaJIT-2.1-20160108
+make TARGET_STRIP=@: CCDEBUG=-g XCFLAGS='-std=gnu99' CC='gcc' PREFIX=/usr/local/openresty/luajit
+==== Building LuaJIT 2.1.0-beta1 ====
+make -C src
+make[1]: Entering directory `/c/ngx_openresty-1.9.7.2/build/LuaJIT-2.1-20160108/src'
+HOSTCC    host/minilua.o
+HOSTLINK  host/minilua.exe
+DYNASM    host/buildvm_arch.h
+HOSTCC    host/buildvm.o
+In file included from host/buildvm.h:15,
+                 from host/buildvm.c:17:
+./lj_def.h:41:20: stdint.h: No such file or directory
+In file included from host/buildvm.h:15,
+                 from host/buildvm.c:17:
+./lj_def.h:120: error: parse error before "BloomFilter"
+./lj_def.h:120: warning: type defaults to `int' in declaration of `BloomFilter'
+./lj_def.h:120: warning: data definition has no type or storage class
+./lj_def.h:199: error: parse error before "lj_bswap"
+./lj_def.h:199: error: parse error before "x"
+./lj_def.h:200: warning: return type defaults to `int'
+./lj_def.h: In function `lj_bswap':
+./lj_def.h:201: error: `uint32_t' undeclared (first use in this function)
+./lj_def.h:201: error: (Each undeclared identifier is reported only once
+./lj_def.h:201: error: for each function it appears in.)
+./lj_def.h:201: error: parse error before "r"
+./lj_def.h:201: error: `r' undeclared (first use in this function)
+./lj_def.h:201: error: `x' undeclared (first use in this function)
+./lj_def.h: At top level:
+./lj_def.h:205: error: parse error before "lj_bswap64"
+./lj_def.h:205: error: parse error before "x"
+./lj_def.h:206: warning: return type defaults to `int'
+./lj_def.h: In function `lj_bswap64':
+./lj_def.h:207: error: `uint64_t' undeclared (first use in this function)
+./lj_def.h:207: error: parse error before "lj_bswap"
+./lj_def.h: At top level:
+./lj_def.h:229: error: parse error before "uint16_t"
+./lj_def.h:229: warning: no semicolon at end of struct or union
+./lj_def.h:230: warning: type defaults to `int' in declaration of `b'
+./lj_def.h:230: warning: data definition has no type or storage class
+./lj_def.h:231: error: parse error before '}' token
+./lj_def.h:231: warning: type defaults to `int' in declaration of `Unaligned16'
+./lj_def.h:231: warning: data definition has no type or storage class
+./lj_def.h:234: error: parse error before "uint32_t"
+./lj_def.h:234: warning: no semicolon at end of struct or union
+./lj_def.h:235: warning: type defaults to `int' in declaration of `b'
+./lj_def.h:235: error: conflicting types for 'b'
+./lj_def.h:230: error: previous declaration of 'b' was here
+./lj_def.h:235: warning: data definition has no type or storage class
+./lj_def.h:236: error: parse error before '}' token
+./lj_def.h:236: warning: type defaults to `int' in declaration of `Unaligned32'
+./lj_def.h:236: warning: data definition has no type or storage class
+./lj_def.h:239: error: parse error before "lj_getu16"
+./lj_def.h:240: warning: return type defaults to `int'
+./lj_def.h: In function `lj_getu16':
+./lj_def.h:241: error: parse error before "Unaligned16"
+./lj_def.h: At top level:
+./lj_def.h:245: error: parse error before "lj_getu32"
+./lj_def.h:246: warning: return type defaults to `int'
+./lj_def.h: In function `lj_getu32':
+./lj_def.h:247: error: parse error before "Unaligned32"
+In file included from host/buildvm.c:17:
+host/buildvm.h: At top level:
+host/buildvm.h:75: error: parse error before "uint8_t"
+host/buildvm.h:75: warning: no semicolon at end of struct or union
+host/buildvm.h:90: error: parse error before '}' token
+host/buildvm.h:90: warning: type defaults to `int' in declaration of `BuildCtx'
+host/buildvm.h:90: warning: data definition has no type or storage class
+host/buildvm.h:92: error: parse error before '*' token
+host/buildvm.h:93: error: parse error before '*' token
+host/buildvm.h:94: error: parse error before '*' token
+host/buildvm.h:95: error: parse error before '*' token
+host/buildvm.h:96: error: parse error before '*' token
+In file included from host/buildvm.c:18:
+./lj_obj.h:19: error: parse error before "MSize"
+./lj_obj.h:19: warning: type defaults to `int' in declaration of `MSize'
+./lj_obj.h:19: warning: data definition has no type or storage class
+./lj_obj.h:23: error: parse error before "GCSize"
+./lj_obj.h:23: warning: type defaults to `int' in declaration of `GCSize'
+./lj_obj.h:23: warning: data definition has no type or storage class
+./lj_obj.h:31: error: parse error before "uint32_t"
+./lj_obj.h:31: warning: no semicolon at end of struct or union
+./lj_obj.h:33: warning: type defaults to `int' in declaration of `MRef'
+./lj_obj.h:33: warning: data definition has no type or storage class
+./lj_obj.h:54: error: parse error before "uint32_t"
+./lj_obj.h:54: warning: no semicolon at end of struct or union
+./lj_obj.h:56: warning: type defaults to `int' in declaration of `GCRef'
+./lj_obj.h:56: warning: data definition has no type or storage class
+./lj_obj.h:147: error: parse error before "BCIns"
+./lj_obj.h:147: warning: type defaults to `int' in declaration of `BCIns'
+./lj_obj.h:147: warning: data definition has no type or storage class
+./lj_obj.h:148: error: parse error before "BCPos"
+./lj_obj.h:148: warning: type defaults to `int' in declaration of `BCPos'
+./lj_obj.h:148: warning: data definition has no type or storage class
+./lj_obj.h:149: error: parse error before "BCReg"
+./lj_obj.h:149: warning: type defaults to `int' in declaration of `BCReg'
+./lj_obj.h:149: warning: data definition has no type or storage class
+./lj_obj.h:157: error: parse error before "MRef"
+./lj_obj.h:157: warning: no semicolon at end of struct or union
+./lj_obj.h:158: warning: type defaults to `int' in declaration of `e'
+./lj_obj.h:158: warning: data definition has no type or storage class
+./lj_obj.h:159: error: parse error before "b"
+./lj_obj.h:159: warning: type defaults to `int' in declaration of `b'
+./lj_obj.h:159: error: conflicting types for 'b'
+./lj_def.h:235: error: previous declaration of 'b' was here
+./lj_obj.h:159: error: conflicting types for 'b'
+./lj_def.h:235: error: previous declaration of 'b' was here
+./lj_obj.h:159: warning: data definition has no type or storage class
+./lj_obj.h:160: error: parse error before "L"
+./lj_obj.h:160: warning: type defaults to `int' in declaration of `L'
+./lj_obj.h:160: warning: data definition has no type or storage class
+./lj_obj.h:161: warning: type defaults to `int' in declaration of `SBuf'
+./lj_obj.h:161: warning: data definition has no type or storage class
+./lj_obj.h:168: error: parse error before "MRef"
+./lj_obj.h:168: warning: no semicolon at end of struct or union
+./lj_obj.h:169: warning: type defaults to `int' in declaration of `FrameLink'
+./lj_obj.h:169: warning: data definition has no type or storage class
+./lj_obj.h:173: error: parse error before "uint64_t"
+./lj_obj.h:173: warning: no semicolon at end of struct or union
+./lj_obj.h:186: error: parse error before "GCRef"
+./lj_obj.h:186: warning: no semicolon at end of struct or union
+./lj_obj.h:186: warning: no semicolon at end of struct or union
+./lj_obj.h:186: error: parse error before '}' token
+./lj_obj.h:186: error: parse error before "it"
+./lj_obj.h:186: warning: type defaults to `int' in declaration of `it'
+./lj_obj.h:186: warning: data definition has no type or storage class
+./lj_obj.h:199: error: parse error before "GCRef"
+./lj_obj.h:199: warning: no semicolon at end of struct or union
+./lj_obj.h:199: warning: type defaults to `int' in declaration of `tp'
+./lj_obj.h:199: warning: data definition has no type or storage class
+./lj_obj.h:203: warning: type defaults to `int' in declaration of `fr'
+./lj_obj.h:203: warning: data definition has no type or storage class
+./lj_obj.h:206: error: parse error before "uint32_t"
+./lj_obj.h:206: warning: no semicolon at end of struct or union
+./lj_obj.h:206: warning: type defaults to `int' in declaration of `hi'
+./lj_obj.h:206: warning: data definition has no type or storage class
+./lj_obj.h:210: warning: type defaults to `int' in declaration of `u32'
+./lj_obj.h:210: warning: data definition has no type or storage class
+./lj_obj.h:211: error: parse error before '}' token
+./lj_obj.h:211: warning: type defaults to `int' in declaration of `TValue'
+./lj_obj.h:211: warning: data definition has no type or storage class
+./lj_obj.h:213: error: parse error before "cTValue"
+./lj_obj.h:213: warning: type defaults to `int' in declaration of `cTValue'
+./lj_obj.h:213: warning: data definition has no type or storage class
+./lj_obj.h:292: error: parse error before "GCRef"
+./lj_obj.h:292: warning: no semicolon at end of struct or union
+./lj_obj.h:292: warning: type defaults to `int' in declaration of `marked'
+./lj_obj.h:292: warning: data definition has no type or storage class
+./lj_obj.h:292: error: parse error before "gct"
+./lj_obj.h:292: warning: type defaults to `int' in declaration of `gct'
+./lj_obj.h:292: warning: data definition has no type or storage class
+./lj_obj.h:293: error: parse error before "reserved"
+./lj_obj.h:293: warning: type defaults to `int' in declaration of `reserved'
+./lj_obj.h:293: warning: data definition has no type or storage class
+./lj_obj.h:294: error: parse error before "unused"
+./lj_obj.h:294: warning: type defaults to `int' in declaration of `unused'
+./lj_obj.h:294: warning: data definition has no type or storage class
+./lj_obj.h:295: error: parse error before "hash"
+./lj_obj.h:295: warning: type defaults to `int' in declaration of `hash'
+./lj_obj.h:295: warning: data definition has no type or storage class
+./lj_obj.h:296: error: parse error before "len"
+./lj_obj.h:296: warning: type defaults to `int' in declaration of `len'
+./lj_obj.h:296: warning: data definition has no type or storage class
+./lj_obj.h:297: warning: type defaults to `int' in declaration of `GCstr'
+./lj_obj.h:297: warning: data definition has no type or storage class
+./lj_obj.h:309: error: parse error before "GCRef"
+./lj_obj.h:309: warning: no semicolon at end of struct or union
+./lj_obj.h:309: warning: type defaults to `int' in declaration of `marked'
+./lj_obj.h:309: warning: data definition has no type or storage class
+./lj_obj.h:309: error: parse error before "gct"
+./lj_obj.h:309: warning: type defaults to `int' in declaration of `gct'
+./lj_obj.h:309: warning: data definition has no type or storage class
+./lj_obj.h:310: error: parse error before "udtype"
+./lj_obj.h:310: warning: type defaults to `int' in declaration of `udtype'
+./lj_obj.h:310: warning: data definition has no type or storage class
+./lj_obj.h:311: error: parse error before "unused2"
+./lj_obj.h:311: warning: type defaults to `int' in declaration of `unused2'
+./lj_obj.h:311: warning: data definition has no type or storage class
+./lj_obj.h:312: error: parse error before "env"
+./lj_obj.h:312: warning: type defaults to `int' in declaration of `env'
+./lj_obj.h:312: warning: data definition has no type or storage class
+./lj_obj.h:313: error: parse error before "len"
+./lj_obj.h:313: warning: type defaults to `int' in declaration of `len'
+./lj_obj.h:313: warning: data definition has no type or storage class
+./lj_obj.h:314: error: parse error before "metatable"
+./lj_obj.h:314: warning: type defaults to `int' in declaration of `metatable'
+./lj_obj.h:314: warning: data definition has no type or storage class
+./lj_obj.h:315: error: parse error before "align1"
+./lj_obj.h:315: warning: type defaults to `int' in declaration of `align1'
+./lj_obj.h:315: warning: data definition has no type or storage class
+./lj_obj.h:316: warning: type defaults to `int' in declaration of `GCudata'
+./lj_obj.h:316: warning: data definition has no type or storage class
+./lj_obj.h:333: error: parse error before "GCRef"
+./lj_obj.h:333: warning: no semicolon at end of struct or union
+./lj_obj.h:333: warning: type defaults to `int' in declaration of `marked'
+./lj_obj.h:333: warning: data definition has no type or storage class
+./lj_obj.h:333: error: parse error before "gct"
+./lj_obj.h:333: warning: type defaults to `int' in declaration of `gct'
+./lj_obj.h:333: warning: data definition has no type or storage class
+./lj_obj.h:334: error: parse error before "ctypeid"
+./lj_obj.h:334: warning: type defaults to `int' in declaration of `ctypeid'
+./lj_obj.h:334: warning: data definition has no type or storage class
+./lj_obj.h:335: warning: type defaults to `int' in declaration of `GCcdata'
+./lj_obj.h:335: warning: data definition has no type or storage class
+./lj_obj.h:339: error: parse error before "uint16_t"
+./lj_obj.h:339: warning: no semicolon at end of struct or union
+./lj_obj.h:340: warning: type defaults to `int' in declaration of `extra'
+./lj_obj.h:340: warning: data definition has no type or storage class
+./lj_obj.h:341: error: parse error before "len"
+./lj_obj.h:341: warning: type defaults to `int' in declaration of `len'
+./lj_obj.h:341: warning: data definition has no type or storage class
+./lj_obj.h:342: warning: type defaults to `int' in declaration of `GCcdataVar'
+./lj_obj.h:342: warning: data definition has no type or storage class
+./lj_obj.h:357: error: parse error before "GCRef"
+./lj_obj.h:357: warning: no semicolon at end of struct or union
+./lj_obj.h:357: warning: type defaults to `int' in declaration of `marked'
+./lj_obj.h:357: warning: data definition has no type or storage class
+./lj_obj.h:357: error: parse error before "gct"
+./lj_obj.h:357: warning: type defaults to `int' in declaration of `gct'
+./lj_obj.h:357: warning: data definition has no type or storage class
+./lj_obj.h:358: error: parse error before "numparams"
+./lj_obj.h:358: warning: type defaults to `int' in declaration of `numparams'
+./lj_obj.h:358: warning: data definition has no type or storage class
+./lj_obj.h:359: error: parse error before "framesize"
+./lj_obj.h:359: warning: type defaults to `int' in declaration of `framesize'
+./lj_obj.h:359: warning: data definition has no type or storage class
+./lj_obj.h:360: error: parse error before "sizebc"
+./lj_obj.h:360: warning: type defaults to `int' in declaration of `sizebc'
+./lj_obj.h:360: warning: data definition has no type or storage class
+./lj_obj.h:364: error: parse error before "gclist"
+./lj_obj.h:364: warning: type defaults to `int' in declaration of `gclist'
+./lj_obj.h:364: warning: data definition has no type or storage class
+./lj_obj.h:365: error: parse error before "k"
+./lj_obj.h:365: warning: type defaults to `int' in declaration of `k'
+./lj_obj.h:365: warning: data definition has no type or storage class
+./lj_obj.h:366: error: parse error before "uv"
+./lj_obj.h:366: warning: type defaults to `int' in declaration of `uv'
+./lj_obj.h:366: warning: data definition has no type or storage class
+./lj_obj.h:367: error: parse error before "sizekgc"
+./lj_obj.h:367: warning: type defaults to `int' in declaration of `sizekgc'
+./lj_obj.h:367: warning: data definition has no type or storage class
+./lj_obj.h:368: error: parse error before "sizekn"
+./lj_obj.h:368: warning: type defaults to `int' in declaration of `sizekn'
+./lj_obj.h:368: warning: data definition has no type or storage class
+./lj_obj.h:369: error: parse error before "sizept"
+./lj_obj.h:369: warning: type defaults to `int' in declaration of `sizept'
+./lj_obj.h:369: warning: data definition has no type or storage class
+./lj_obj.h:370: error: parse error before "sizeuv"
+./lj_obj.h:370: warning: type defaults to `int' in declaration of `sizeuv'
+./lj_obj.h:370: warning: data definition has no type or storage class
+./lj_obj.h:371: error: parse error before "flags"
+./lj_obj.h:371: warning: type defaults to `int' in declaration of `flags'
+./lj_obj.h:371: warning: data definition has no type or storage class
+./lj_obj.h:372: error: parse error before "trace"
+./lj_obj.h:372: warning: type defaults to `int' in declaration of `trace'
+./lj_obj.h:372: warning: data definition has no type or storage class
+./lj_obj.h:374: error: parse error before "chunkname"
+./lj_obj.h:374: warning: type defaults to `int' in declaration of `chunkname'
+./lj_obj.h:374: warning: data definition has no type or storage class
+./lj_obj.h:377: error: parse error before "lineinfo"
+./lj_obj.h:377: warning: type defaults to `int' in declaration of `lineinfo'
+./lj_obj.h:377: warning: data definition has no type or storage class
+./lj_obj.h:378: error: parse error before "uvinfo"
+./lj_obj.h:378: warning: type defaults to `int' in declaration of `uvinfo'
+./lj_obj.h:378: warning: data definition has no type or storage class
+./lj_obj.h:379: error: parse error before "varinfo"
+./lj_obj.h:379: warning: type defaults to `int' in declaration of `varinfo'
+./lj_obj.h:379: warning: data definition has no type or storage class
+./lj_obj.h:380: warning: type defaults to `int' in declaration of `GCproto'
+./lj_obj.h:380: warning: data definition has no type or storage class
+./lj_obj.h:417: error: parse error before "GCRef"
+./lj_obj.h:417: warning: no semicolon at end of struct or union
+./lj_obj.h:417: warning: type defaults to `int' in declaration of `marked'
+./lj_obj.h:417: warning: data definition has no type or storage class
+./lj_obj.h:417: error: parse error before "gct"
+./lj_obj.h:417: warning: type defaults to `int' in declaration of `gct'
+./lj_obj.h:417: warning: data definition has no type or storage class
+./lj_obj.h:418: error: parse error before "closed"
+./lj_obj.h:418: warning: type defaults to `int' in declaration of `closed'
+./lj_obj.h:418: warning: data definition has no type or storage class
+./lj_obj.h:419: error: parse error before "immutable"
+./lj_obj.h:419: warning: type defaults to `int' in declaration of `immutable'
+./lj_obj.h:419: warning: data definition has no type or storage class
+./lj_obj.h:421: error: parse error before "TValue"
+./lj_obj.h:421: warning: no semicolon at end of struct or union
+./lj_obj.h:423: error: parse error before "GCRef"
+./lj_obj.h:423: warning: no semicolon at end of struct or union
+./lj_obj.h:424: warning: type defaults to `int' in declaration of `next'
+./lj_obj.h:424: warning: data definition has no type or storage class
+./lj_obj.h:427: error: parse error before "v"
+./lj_obj.h:427: warning: type defaults to `int' in declaration of `v'
+./lj_obj.h:427: warning: data definition has no type or storage class
+./lj_obj.h:428: error: parse error before "dhash"
+./lj_obj.h:428: warning: type defaults to `int' in declaration of `dhash'
+./lj_obj.h:428: warning: data definition has no type or storage class
+./lj_obj.h:429: warning: type defaults to `int' in declaration of `GCupval'
+./lj_obj.h:429: warning: data definition has no type or storage class
+./lj_obj.h:443: error: parse error before "GCRef"
+./lj_obj.h:443: warning: no semicolon at end of struct or union
+./lj_obj.h:443: warning: type defaults to `int' in declaration of `marked'
+./lj_obj.h:443: warning: data definition has no type or storage class
+./lj_obj.h:443: error: parse error before "gct"
+./lj_obj.h:443: warning: type defaults to `int' in declaration of `gct'
+./lj_obj.h:443: warning: data definition has no type or storage class
+./lj_obj.h:443: error: parse error before "ffid"
+./lj_obj.h:443: warning: type defaults to `int' in declaration of `ffid'
+./lj_obj.h:443: warning: data definition has no type or storage class
+./lj_obj.h:443: error: parse error before "nupvalues"
+./lj_obj.h:443: warning: type defaults to `int' in declaration of `nupvalues'
+./lj_obj.h:443: warning: data definition has no type or storage class
+./lj_obj.h:443: error: parse error before "env"
+./lj_obj.h:443: warning: type defaults to `int' in declaration of `env'
+./lj_obj.h:443: warning: data definition has no type or storage class
+./lj_obj.h:443: error: parse error before "gclist"
+./lj_obj.h:443: warning: type defaults to `int' in declaration of `gclist'
+./lj_obj.h:443: warning: data definition has no type or storage class
+./lj_obj.h:443: error: parse error before "pc"
+./lj_obj.h:443: warning: type defaults to `int' in declaration of `pc'
+./lj_obj.h:443: warning: data definition has no type or storage class
+./lj_obj.h:445: error: parse error before "upvalue"
+./lj_obj.h:445: warning: type defaults to `int' in declaration of `upvalue'
+./lj_obj.h:445: warning: data definition has no type or storage class
+./lj_obj.h:446: error: parse error before '}' token
+./lj_obj.h:446: warning: type defaults to `int' in declaration of `GCfuncC'
+./lj_obj.h:446: warning: data definition has no type or storage class
+./lj_obj.h:449: error: parse error before "GCRef"
+./lj_obj.h:449: warning: no semicolon at end of struct or union
+./lj_obj.h:449: warning: type defaults to `int' in declaration of `marked'
+./lj_obj.h:449: warning: data definition has no type or storage class
+./lj_obj.h:449: error: parse error before "gct"
+./lj_obj.h:449: warning: type defaults to `int' in declaration of `gct'
+./lj_obj.h:449: warning: data definition has no type or storage class
+./lj_obj.h:449: error: parse error before "ffid"
+./lj_obj.h:449: warning: type defaults to `int' in declaration of `ffid'
+./lj_obj.h:449: warning: data definition has no type or storage class
+./lj_obj.h:449: error: parse error before "nupvalues"
+./lj_obj.h:449: warning: type defaults to `int' in declaration of `nupvalues'
+./lj_obj.h:449: warning: data definition has no type or storage class
+./lj_obj.h:449: error: parse error before "env"
+./lj_obj.h:449: warning: type defaults to `int' in declaration of `env'
+./lj_obj.h:449: warning: data definition has no type or storage class
+./lj_obj.h:449: error: parse error before "gclist"
+./lj_obj.h:449: warning: type defaults to `int' in declaration of `gclist'
+./lj_obj.h:449: warning: data definition has no type or storage class
+./lj_obj.h:449: error: parse error before "pc"
+./lj_obj.h:449: warning: type defaults to `int' in declaration of `pc'
+./lj_obj.h:449: warning: data definition has no type or storage class
+./lj_obj.h:450: error: parse error before "uvptr"
+./lj_obj.h:450: warning: type defaults to `int' in declaration of `uvptr'
+./lj_obj.h:450: warning: data definition has no type or storage class
+./lj_obj.h:451: error: parse error before '}' token
+./lj_obj.h:451: warning: type defaults to `int' in declaration of `GCfuncL'
+./lj_obj.h:451: warning: data definition has no type or storage class
+./lj_obj.h:454: error: parse error before "GCfuncC"
+./lj_obj.h:454: warning: no semicolon at end of struct or union
+./lj_obj.h:455: warning: type defaults to `int' in declaration of `l'
+./lj_obj.h:455: warning: data definition has no type or storage class
+./lj_obj.h:456: warning: type defaults to `int' in declaration of `GCfunc'
+./lj_obj.h:456: warning: data definition has no type or storage class
+./lj_obj.h:472: error: parse error before "TValue"
+./lj_obj.h:472: warning: no semicolon at end of struct or union
+./lj_obj.h:473: warning: type defaults to `int' in declaration of `key'
+./lj_obj.h:473: warning: data definition has no type or storage class
+./lj_obj.h:474: error: parse error before "next"
+./lj_obj.h:474: warning: type defaults to `int' in declaration of `next'
+./lj_obj.h:474: warning: data definition has no type or storage class
+./lj_obj.h:476: error: parse error before "freetop"
+./lj_obj.h:476: warning: type defaults to `int' in declaration of `freetop'
+./lj_obj.h:476: warning: data definition has no type or storage class
+./lj_obj.h:478: warning: type defaults to `int' in declaration of `Node'
+./lj_obj.h:478: warning: data definition has no type or storage class
+./lj_obj.h:480: error: parse error before ')' token
+./lj_obj.h:483: error: parse error before "GCRef"
+./lj_obj.h:483: warning: no semicolon at end of struct or union
+./lj_obj.h:483: warning: type defaults to `int' in declaration of `marked'
+./lj_obj.h:483: warning: data definition has no type or storage class
+./lj_obj.h:483: error: parse error before "gct"
+./lj_obj.h:483: warning: type defaults to `int' in declaration of `gct'
+./lj_obj.h:483: warning: data definition has no type or storage class
+./lj_obj.h:484: error: parse error before "nomm"
+./lj_obj.h:484: warning: type defaults to `int' in declaration of `nomm'
+./lj_obj.h:484: warning: data definition has no type or storage class
+./lj_obj.h:486: error: parse error before "array"
+./lj_obj.h:486: warning: type defaults to `int' in declaration of `array'
+./lj_obj.h:486: warning: data definition has no type or storage class
+./lj_obj.h:487: error: parse error before "gclist"
+./lj_obj.h:487: warning: type defaults to `int' in declaration of `gclist'
+./lj_obj.h:487: warning: data definition has no type or storage class
+./lj_obj.h:488: error: parse error before "metatable"
+./lj_obj.h:488: warning: type defaults to `int' in declaration of `metatable'
+./lj_obj.h:488: warning: data definition has no type or storage class
+./lj_obj.h:489: error: parse error before "node"
+./lj_obj.h:489: warning: type defaults to `int' in declaration of `node'
+./lj_obj.h:489: warning: data definition has no type or storage class
+./lj_obj.h:490: error: parse error before "asize"
+./lj_obj.h:490: warning: type defaults to `int' in declaration of `asize'
+./lj_obj.h:490: warning: data definition has no type or storage class
+./lj_obj.h:491: error: parse error before "hmask"
+./lj_obj.h:491: warning: type defaults to `int' in declaration of `hmask'
+./lj_obj.h:491: warning: data definition has no type or storage class
+./lj_obj.h:495: warning: type defaults to `int' in declaration of `GCtab'
+./lj_obj.h:495: warning: data definition has no type or storage class
+./lj_obj.h:574: error: parse error before "GCSize"
+./lj_obj.h:574: warning: no semicolon at end of struct or union
+./lj_obj.h:575: warning: type defaults to `int' in declaration of `threshold'
+./lj_obj.h:575: warning: data definition has no type or storage class
+./lj_obj.h:576: error: parse error before "currentwhite"
+./lj_obj.h:576: warning: type defaults to `int' in declaration of `currentwhite'
+./lj_obj.h:576: warning: data definition has no type or storage class
+./lj_obj.h:577: error: parse error before "state"
+./lj_obj.h:577: warning: type defaults to `int' in declaration of `state'
+./lj_obj.h:577: warning: data definition has no type or storage class
+./lj_obj.h:578: error: parse error before "nocdatafin"
+./lj_obj.h:578: warning: type defaults to `int' in declaration of `nocdatafin'
+./lj_obj.h:578: warning: data definition has no type or storage class
+./lj_obj.h:579: error: parse error before "unused2"
+./lj_obj.h:579: warning: type defaults to `int' in declaration of `unused2'
+./lj_obj.h:579: warning: data definition has no type or storage class
+./lj_obj.h:580: error: parse error before "sweepstr"
+./lj_obj.h:580: warning: type defaults to `int' in declaration of `sweepstr'
+./lj_obj.h:580: warning: data definition has no type or storage class
+./lj_obj.h:581: error: parse error before "root"
+./lj_obj.h:581: warning: type defaults to `int' in declaration of `root'
+./lj_obj.h:581: warning: data definition has no type or storage class
+./lj_obj.h:582: error: parse error before "sweep"
+./lj_obj.h:582: warning: type defaults to `int' in declaration of `sweep'
+./lj_obj.h:582: warning: data definition has no type or storage class
+./lj_obj.h:583: error: parse error before "gray"
+./lj_obj.h:583: warning: type defaults to `int' in declaration of `gray'
+./lj_obj.h:583: warning: data definition has no type or storage class
+./lj_obj.h:584: error: parse error before "grayagain"
+./lj_obj.h:584: warning: type defaults to `int' in declaration of `grayagain'
+./lj_obj.h:584: warning: data definition has no type or storage class
+./lj_obj.h:585: error: parse error before "weak"
+./lj_obj.h:585: warning: type defaults to `int' in declaration of `weak'
+./lj_obj.h:585: warning: data definition has no type or storage class
+./lj_obj.h:586: error: parse error before "mmudata"
+./lj_obj.h:586: warning: type defaults to `int' in declaration of `mmudata'
+./lj_obj.h:586: warning: data definition has no type or storage class
+./lj_obj.h:587: error: parse error before "debt"
+./lj_obj.h:587: warning: type defaults to `int' in declaration of `debt'
+./lj_obj.h:587: warning: data definition has no type or storage class
+./lj_obj.h:588: error: parse error before "estimate"
+./lj_obj.h:588: warning: type defaults to `int' in declaration of `estimate'
+./lj_obj.h:588: warning: data definition has no type or storage class
+./lj_obj.h:589: error: parse error before "stepmul"
+./lj_obj.h:589: warning: type defaults to `int' in declaration of `stepmul'
+./lj_obj.h:589: warning: data definition has no type or storage class
+./lj_obj.h:590: error: parse error before "pause"
+./lj_obj.h:590: warning: type defaults to `int' in declaration of `pause'
+./lj_obj.h:590: warning: data definition has no type or storage class
+./lj_obj.h:591: warning: type defaults to `int' in declaration of `GCState'
+./lj_obj.h:591: warning: data definition has no type or storage class
+./lj_obj.h:595: error: parse error before "GCRef"
+./lj_obj.h:595: warning: no semicolon at end of struct or union
+./lj_obj.h:596: warning: type defaults to `int' in declaration of `strmask'
+./lj_obj.h:596: warning: data definition has no type or storage class
+./lj_obj.h:597: error: parse error before "strnum"
+./lj_obj.h:597: warning: type defaults to `int' in declaration of `strnum'
+./lj_obj.h:597: warning: data definition has no type or storage class
+./lj_obj.h:600: error: parse error before "gc"
+./lj_obj.h:600: warning: type defaults to `int' in declaration of `gc'
+./lj_obj.h:600: warning: data definition has no type or storage class
+./lj_obj.h:602: error: parse error before "tmpbuf"
+./lj_obj.h:602: warning: type defaults to `int' in declaration of `tmpbuf'
+./lj_obj.h:602: warning: data definition has no type or storage class
+./lj_obj.h:603: error: parse error before "strempty"
+./lj_obj.h:603: warning: type defaults to `int' in declaration of `strempty'
+./lj_obj.h:603: warning: data definition has no type or storage class
+./lj_obj.h:604: error: parse error before "stremptyz"
+./lj_obj.h:604: warning: type defaults to `int' in declaration of `stremptyz'
+./lj_obj.h:604: warning: data definition has no type or storage class
+./lj_obj.h:605: error: parse error before "hookmask"
+./lj_obj.h:605: warning: type defaults to `int' in declaration of `hookmask'
+./lj_obj.h:605: warning: data definition has no type or storage class
+./lj_obj.h:606: error: parse error before "dispatchmode"
+./lj_obj.h:606: warning: type defaults to `int' in declaration of `dispatchmode'
+./lj_obj.h:606: warning: data definition has no type or storage class
+./lj_obj.h:607: error: parse error before "vmevmask"
+./lj_obj.h:607: warning: type defaults to `int' in declaration of `vmevmask'
+./lj_obj.h:607: warning: data definition has no type or storage class
+./lj_obj.h:608: error: parse error before "mainthref"
+./lj_obj.h:608: warning: type defaults to `int' in declaration of `mainthref'
+./lj_obj.h:608: warning: data definition has no type or storage class
+./lj_obj.h:609: error: parse error before "registrytv"
+./lj_obj.h:609: warning: type defaults to `int' in declaration of `registrytv'
+./lj_obj.h:609: warning: data definition has no type or storage class
+./lj_obj.h:610: error: parse error before "tmptv"
+./lj_obj.h:610: warning: type defaults to `int' in declaration of `tmptv'
+./lj_obj.h:610: warning: type defaults to `int' in declaration of `tmptv2'
+./lj_obj.h:610: warning: data definition has no type or storage class
+./lj_obj.h:611: error: parse error before "nilnode"
+./lj_obj.h:611: warning: type defaults to `int' in declaration of `nilnode'
+./lj_obj.h:611: warning: data definition has no type or storage class
+./lj_obj.h:612: error: parse error before "uvhead"
+./lj_obj.h:612: warning: type defaults to `int' in declaration of `uvhead'
+./lj_obj.h:612: warning: data definition has no type or storage class
+./lj_obj.h:618: error: parse error before "bc_cfunc_int"
+./lj_obj.h:618: warning: type defaults to `int' in declaration of `bc_cfunc_int'
+./lj_obj.h:618: warning: data definition has no type or storage class
+./lj_obj.h:619: error: parse error before "bc_cfunc_ext"
+./lj_obj.h:619: warning: type defaults to `int' in declaration of `bc_cfunc_ext'
+./lj_obj.h:619: warning: data definition has no type or storage class
+./lj_obj.h:620: error: parse error before "cur_L"
+./lj_obj.h:620: warning: type defaults to `int' in declaration of `cur_L'
+./lj_obj.h:620: warning: data definition has no type or storage class
+./lj_obj.h:621: error: parse error before "jit_base"
+./lj_obj.h:621: warning: type defaults to `int' in declaration of `jit_base'
+./lj_obj.h:621: warning: data definition has no type or storage class
+./lj_obj.h:622: error: parse error before "saved_jit_base"
+./lj_obj.h:622: warning: type defaults to `int' in declaration of `saved_jit_base'
+./lj_obj.h:622: warning: data definition has no type or storage class
+./lj_obj.h:623: error: parse error before "ctype_state"
+./lj_obj.h:623: warning: type defaults to `int' in declaration of `ctype_state'
+./lj_obj.h:623: warning: data definition has no type or storage class
+./lj_obj.h:624: error: parse error before "gcroot"
+./lj_obj.h:624: warning: type defaults to `int' in declaration of `gcroot'
+./lj_obj.h:624: warning: data definition has no type or storage class
+./lj_obj.h:625: error: parse error before '}' token
+./lj_obj.h:625: warning: type defaults to `int' in declaration of `global_State'
+./lj_obj.h:625: warning: data definition has no type or storage class
+./lj_obj.h:651: error: parse error before "GCRef"
+./lj_obj.h:651: warning: no semicolon at end of struct or union
+./lj_obj.h:651: warning: type defaults to `int' in declaration of `marked'
+./lj_obj.h:651: warning: data definition has no type or storage class
+./lj_obj.h:651: error: parse error before "gct"
+./lj_obj.h:651: warning: type defaults to `int' in declaration of `gct'
+./lj_obj.h:651: warning: data definition has no type or storage class
+./lj_obj.h:652: error: parse error before "dummy_ffid"
+./lj_obj.h:652: warning: type defaults to `int' in declaration of `dummy_ffid'
+./lj_obj.h:652: warning: data definition has no type or storage class
+./lj_obj.h:653: error: parse error before "status"
+./lj_obj.h:653: warning: type defaults to `int' in declaration of `status'
+./lj_obj.h:653: warning: data definition has no type or storage class
+./lj_obj.h:654: error: parse error before "glref"
+./lj_obj.h:654: warning: type defaults to `int' in declaration of `glref'
+./lj_obj.h:654: warning: data definition has no type or storage class
+./lj_obj.h:655: error: parse error before "gclist"
+./lj_obj.h:655: warning: type defaults to `int' in declaration of `gclist'
+./lj_obj.h:655: warning: data definition has no type or storage class
+./lj_obj.h:656: error: parse error before '*' token
+./lj_obj.h:656: warning: type defaults to `int' in declaration of `base'
+./lj_obj.h:656: warning: data definition has no type or storage class
+./lj_obj.h:657: error: parse error before '*' token
+./lj_obj.h:657: warning: type defaults to `int' in declaration of `top'
+./lj_obj.h:657: warning: data definition has no type or storage class
+./lj_obj.h:658: error: parse error before "maxstack"
+./lj_obj.h:658: warning: type defaults to `int' in declaration of `maxstack'
+./lj_obj.h:658: warning: data definition has no type or storage class
+./lj_obj.h:659: error: parse error before "stack"
+./lj_obj.h:659: warning: type defaults to `int' in declaration of `stack'
+./lj_obj.h:659: warning: data definition has no type or storage class
+./lj_obj.h:660: error: parse error before "openupval"
+./lj_obj.h:660: warning: type defaults to `int' in declaration of `openupval'
+./lj_obj.h:660: warning: data definition has no type or storage class
+./lj_obj.h:661: error: parse error before "env"
+./lj_obj.h:661: warning: type defaults to `int' in declaration of `env'
+./lj_obj.h:661: warning: data definition has no type or storage class
+./lj_obj.h:663: error: parse error before "stacksize"
+./lj_obj.h:663: warning: type defaults to `int' in declaration of `stacksize'
+./lj_obj.h:663: warning: data definition has no type or storage class
+./lj_obj.h:686: error: parse error before "GCRef"
+./lj_obj.h:686: warning: no semicolon at end of struct or union
+./lj_obj.h:686: warning: type defaults to `int' in declaration of `marked'
+./lj_obj.h:686: warning: data definition has no type or storage class
+./lj_obj.h:686: error: parse error before "gct"
+./lj_obj.h:686: warning: type defaults to `int' in declaration of `gct'
+./lj_obj.h:686: warning: data definition has no type or storage class
+./lj_obj.h:687: error: parse error before "unused1"
+./lj_obj.h:687: warning: type defaults to `int' in declaration of `unused1'
+./lj_obj.h:687: warning: data definition has no type or storage class
+./lj_obj.h:688: error: parse error before "unused2"
+./lj_obj.h:688: warning: type defaults to `int' in declaration of `unused2'
+./lj_obj.h:688: warning: data definition has no type or storage class
+./lj_obj.h:689: error: parse error before "env"
+./lj_obj.h:689: warning: type defaults to `int' in declaration of `env'
+./lj_obj.h:689: warning: data definition has no type or storage class
+./lj_obj.h:690: error: parse error before "gclist"
+./lj_obj.h:690: warning: type defaults to `int' in declaration of `gclist'
+./lj_obj.h:690: warning: data definition has no type or storage class
+./lj_obj.h:691: error: parse error before "metatable"
+./lj_obj.h:691: warning: type defaults to `int' in declaration of `metatable'
+./lj_obj.h:691: warning: data definition has no type or storage class
+./lj_obj.h:692: warning: type defaults to `int' in declaration of `GChead'
+./lj_obj.h:692: warning: data definition has no type or storage class
+./lj_obj.h:695: error: parse error before ')' token
+./lj_obj.h:695: error: parse error before ')' token
+./lj_obj.h:696: error: parse error before ')' token
+./lj_obj.h:696: error: parse error before ')' token
+./lj_obj.h:699: error: parse error before ')' token
+./lj_obj.h:699: error: parse error before ')' token
+./lj_obj.h:700: error: parse error before ')' token
+./lj_obj.h:700: error: parse error before ')' token
+./lj_obj.h:703: error: parse error before ')' token
+./lj_obj.h:703: error: dereferencing pointer to incomplete type
+./lj_obj.h:704: error: parse error before ')' token
+./lj_obj.h:704: error: parse error before ')' token
+./lj_obj.h:705: error: parse error before ')' token
+./lj_obj.h:705: error: parse error before ')' token
+./lj_obj.h:706: error: parse error before ')' token
+./lj_obj.h:706: error: parse error before ')' token
+./lj_obj.h:709: error: parse error before "GChead"
+./lj_obj.h:709: warning: no semicolon at end of struct or union
+./lj_obj.h:710: warning: type defaults to `int' in declaration of `str'
+./lj_obj.h:710: warning: data definition has no type or storage class
+./lj_obj.h:711: error: parse error before "uv"
+./lj_obj.h:711: warning: type defaults to `int' in declaration of `uv'
+./lj_obj.h:711: warning: data definition has no type or storage class
+./lj_obj.h:713: error: parse error before "pt"
+./lj_obj.h:713: warning: type defaults to `int' in declaration of `pt'
+./lj_obj.h:713: warning: data definition has no type or storage class
+./lj_obj.h:714: error: parse error before "fn"
+./lj_obj.h:714: warning: type defaults to `int' in declaration of `fn'
+./lj_obj.h:714: warning: data definition has no type or storage class
+./lj_obj.h:715: error: parse error before "cd"
+./lj_obj.h:715: warning: type defaults to `int' in declaration of `cd'
+./lj_obj.h:715: warning: data definition has no type or storage class
+./lj_obj.h:716: error: parse error before "tab"
+./lj_obj.h:716: warning: type defaults to `int' in declaration of `tab'
+./lj_obj.h:716: warning: data definition has no type or storage class
+./lj_obj.h:717: error: parse error before "ud"
+./lj_obj.h:717: warning: type defaults to `int' in declaration of `ud'
+./lj_obj.h:717: warning: data definition has no type or storage class
+./lj_obj.h:718: warning: type defaults to `int' in declaration of `GCobj'
+./lj_obj.h:718: warning: data definition has no type or storage class
+./lj_obj.h:828: error: parse error before '*' token
+./lj_obj.h: In function `setlightudV':
+./lj_obj.h:835: error: `o' undeclared (first use in this function)
+./lj_obj.h:835: error: `uint32_t' undeclared (first use in this function)
+./lj_obj.h:835: error: `uintptr_t' undeclared (first use in this function)
+./lj_obj.h:835: error: `p' undeclared (first use in this function)
+./lj_obj.h: At top level:
+./lj_obj.h:859: error: parse error before '*' token
+./lj_obj.h: In function `setgcVraw':
+./lj_obj.h:864: error: `o' undeclared (first use in this function)
+./lj_obj.h:864: error: `uint32_t' undeclared (first use in this function)
+./lj_obj.h:864: error: `uintptr_t' undeclared (first use in this function)
+./lj_obj.h:864: error: invalid type argument of `->'
+./lj_obj.h:864: error: `itype' undeclared (first use in this function)
+./lj_obj.h: At top level:
+./lj_obj.h:868: error: parse error before "TValue"
+./lj_obj.h: In function `setgcV':
+./lj_obj.h:870: error: `o' undeclared (first use in this function)
+./lj_obj.h: At top level:
+./lj_obj.h:878: error: parse error before "TValue"
+./lj_obj.h: In function `setstrV':
+./lj_obj.h:878: error: `o' undeclared (first use in this function)
+./lj_obj.h:878: error: parse error before ')' token
+./lj_obj.h: At top level:
+./lj_obj.h:879: error: parse error before "TValue"
+./lj_obj.h: In function `setthreadV':
+./lj_obj.h:879: error: `o' undeclared (first use in this function)
+./lj_obj.h:879: error: parse error before ')' token
+./lj_obj.h: At top level:
+./lj_obj.h:880: error: parse error before "TValue"
+./lj_obj.h: In function `setprotoV':
+./lj_obj.h:880: error: `o' undeclared (first use in this function)
+./lj_obj.h:880: error: parse error before ')' token
+./lj_obj.h: At top level:
+./lj_obj.h:881: error: parse error before "TValue"
+./lj_obj.h: In function `setfuncV':
+./lj_obj.h:881: error: `o' undeclared (first use in this function)
+./lj_obj.h:881: error: parse error before ')' token
+./lj_obj.h: At top level:
+./lj_obj.h:882: error: parse error before "TValue"
+./lj_obj.h: In function `setcdataV':
+./lj_obj.h:882: error: `o' undeclared (first use in this function)
+./lj_obj.h:882: error: parse error before ')' token
+./lj_obj.h: At top level:
+./lj_obj.h:883: error: parse error before "TValue"
+./lj_obj.h: In function `settabV':
+./lj_obj.h:883: error: `o' undeclared (first use in this function)
+./lj_obj.h:883: error: parse error before ')' token
+./lj_obj.h: At top level:
+./lj_obj.h:884: error: parse error before "TValue"
+./lj_obj.h: In function `setudataV':
+./lj_obj.h:884: error: `o' undeclared (first use in this function)
+./lj_obj.h:884: error: parse error before ')' token
+./lj_obj.h: At top level:
+./lj_obj.h:891: error: parse error before '*' token
+./lj_obj.h: In function `setintV':
+./lj_obj.h:896: error: `o' undeclared (first use in this function)
+./lj_obj.h: At top level:
+./lj_obj.h:900: error: parse error before '*' token
+./lj_obj.h: In function `setint64V':
+./lj_obj.h:903: error: `o' undeclared (first use in this function)
+./lj_obj.h: At top level:
+./lj_obj.h:915: error: parse error before "TValue"
+./lj_obj.h: In function `copyTV':
+./lj_obj.h:917: error: `o1' undeclared (first use in this function)
+./lj_obj.h:917: error: `o2' undeclared (first use in this function)
+./lj_obj.h: In function `lj_num2bit':
+./lj_obj.h:931: error: parse error before "o"
+./lj_obj.h:932: error: `o' undeclared (first use in this function)
+./lj_obj.h: At top level:
+./lj_obj.h:939: error: parse error before "lj_num2u64"
+./lj_obj.h:940: warning: return type defaults to `int'
+./lj_obj.h: In function `lj_num2u64':
+./lj_obj.h:946: error: `uint64_t' undeclared (first use in this function)
+./lj_obj.h:946: error: parse error before "n"
+./lj_obj.h: At top level:
+./lj_obj.h:949: error: parse error before '*' token
+./lj_obj.h: In function `numberVint':
+./lj_obj.h:951: error: `o' undeclared (first use in this function)
+./lj_obj.h: At top level:
+./lj_obj.h:957: error: parse error before '*' token
+./lj_obj.h: In function `numberVnum':
+./lj_obj.h:959: error: `o' undeclared (first use in this function)
+./lj_obj.h: At top level:
+./lj_obj.h:974: error: parse error before '*' token
+./lj_obj.h:975: error: parse error before '*' token
+In file included from host/buildvm.c:19:
+./lj_gc.h:49: error: parse error before '*' token
+./lj_gc.h:56: error: parse error before '*' token
+./lj_gc.h:60: error: parse error before '*' token
+./lj_gc.h:73: error: parse error before '*' token
+./lj_gc.h:74: error: parse error before '*' token
+./lj_gc.h:75: error: parse error before '*' token
+./lj_gc.h:77: error: parse error before '*' token
+./lj_gc.h:81: error: parse error before '*' token
+./lj_gc.h: In function `lj_gc_barrierback':
+./lj_gc.h:83: error: `o' undeclared (first use in this function)
+./lj_gc.h:83: error: parse error before ')' token
+./lj_gc.h:83: error: `t' undeclared (first use in this function)
+./lj_gc.h:86: error: `uint8_t' undeclared (first use in this function)
+./lj_gc.h:86: error: parse error before '~' token
+./lj_gc.h:87: error: `g' undeclared (first use in this function)
+./lj_gc.h:88: error: `uint32_t' undeclared (first use in this function)
+./lj_gc.h:88: error: `uintptr_t' undeclared (first use in this function)
+./lj_gc.h: At top level:
+./lj_gc.h:110: error: parse error before "GCSize"
+./lj_gc.h:111: error: parse error before "GCSize"
+./lj_gc.h:113: error: parse error before "MSize"
+./lj_gc.h:117: error: parse error before '*' token
+./lj_gc.h: In function `lj_mem_free':
+./lj_gc.h:119: error: `g' undeclared (first use in this function)
+./lj_gc.h:119: error: parse error before "osize"
+./lj_gc.h:120: error: `p' undeclared (first use in this function)
+./lj_gc.h:120: error: `osize' undeclared (first use in this function)
+In file included from host/buildvm.c:20:
+./lj_bc.h: At top level:
+./lj_bc.h:262: error: parse error before "lj_bc_mode"
+./lj_bc.h:262: warning: type defaults to `int' in declaration of `lj_bc_mode'
+./lj_bc.h:262: warning: data definition has no type or storage class
+./lj_bc.h:263: error: parse error before "lj_bc_ofs"
+./lj_bc.h:263: warning: type defaults to `int' in declaration of `lj_bc_ofs'
+./lj_bc.h:263: warning: data definition has no type or storage class
+In file included from host/buildvm.c:21:
+./lj_ir.h:160: error: parse error before "IROp1"
+./lj_ir.h:160: warning: type defaults to `int' in declaration of `IROp1'
+./lj_ir.h:160: warning: data definition has no type or storage class
+./lj_ir.h:293: error: parse error before "lj_ir_mode"
+./lj_ir.h:293: warning: type defaults to `int' in declaration of `lj_ir_mode'
+./lj_ir.h:293: warning: data definition has no type or storage class
+./lj_ir.h:338: error: parse error before "uint8_t"
+./lj_ir.h:338: warning: no semicolon at end of struct or union
+./lj_ir.h:338: warning: type defaults to `int' in declaration of `IRType1'
+./lj_ir.h:338: warning: data definition has no type or storage class
+./lj_ir.h:393: error: parse error before "lj_ir_type_size"
+./lj_ir.h:393: warning: type defaults to `int' in declaration of `lj_ir_type_size'
+./lj_ir.h:393: warning: data definition has no type or storage class
+./lj_ir.h:395: warning: type defaults to `int' in declaration of `TValue'
+./lj_ir.h:395: error: parse error before '*' token
+./lj_ir.h: In function `itype2irt':
+./lj_ir.h:397: error: `tv' undeclared (first use in this function)
+./lj_ir.h: At top level:
+./lj_ir.h:409: error: parse error before "irt_toitype_"
+./lj_ir.h:410: warning: return type defaults to `int'
+./lj_ir.h: In function `irt_toitype_':
+./lj_ir.h:416: error: `uint32_t' undeclared (first use in this function)
+./lj_ir.h:416: error: parse error before "t"
+./lj_ir.h: At top level:
+./lj_ir.h:431: error: parse error before "IROpT"
+./lj_ir.h:431: warning: type defaults to `int' in declaration of `IROpT'
+./lj_ir.h:431: warning: data definition has no type or storage class
+./lj_ir.h:436: error: parse error before "IRRef1"
+./lj_ir.h:436: warning: type defaults to `int' in declaration of `IRRef1'
+./lj_ir.h:436: warning: data definition has no type or storage class
+./lj_ir.h:437: error: parse error before "IRRef2"
+./lj_ir.h:437: warning: type defaults to `int' in declaration of `IRRef2'
+./lj_ir.h:437: warning: data definition has no type or storage class
+./lj_ir.h:438: error: parse error before "IRRef"
+./lj_ir.h:438: warning: type defaults to `int' in declaration of `IRRef'
+./lj_ir.h:438: warning: data definition has no type or storage class
+./lj_ir.h:473: error: parse error before "TRef"
+./lj_ir.h:473: warning: type defaults to `int' in declaration of `TRef'
+./lj_ir.h:473: warning: data definition has no type or storage class
+./lj_ir.h:533: error: parse error before "IRRef1"
+./lj_ir.h:533: warning: no semicolon at end of struct or union
+./lj_ir.h:533: warning: no semicolon at end of struct or union
+./lj_ir.h:533: warning: type defaults to `int' in declaration of `op2'
+./lj_ir.h:533: warning: data definition has no type or storage class
+./lj_ir.h:537: error: parse error before "ot"
+./lj_ir.h:537: warning: type defaults to `int' in declaration of `ot'
+./lj_ir.h:537: warning: data definition has no type or storage class
+./lj_ir.h:538: error: parse error before "prev"
+./lj_ir.h:538: warning: type defaults to `int' in declaration of `prev'
+./lj_ir.h:538: warning: data definition has no type or storage class
+./lj_ir.h:541: error: parse error before "IRRef2"
+./lj_ir.h:541: warning: no semicolon at end of struct or union
+./lj_ir.h:542: warning: type defaults to `int' in declaration of `t'
+./lj_ir.h:542: warning: data definition has no type or storage class
+./lj_ir.h:542: error: parse error before "o"
+./lj_ir.h:542: warning: type defaults to `int' in declaration of `o'
+./lj_ir.h:542: warning: data definition has no type or storage class
+./lj_ir.h:546: error: parse error before "r"
+./lj_ir.h:546: warning: type defaults to `int' in declaration of `r'
+./lj_ir.h:546: warning: data definition has no type or storage class
+./lj_ir.h:546: error: parse error before "s"
+./lj_ir.h:546: warning: type defaults to `int' in declaration of `s'
+./lj_ir.h:546: warning: data definition has no type or storage class
+./lj_ir.h:552: error: parse error before "gcr"
+./lj_ir.h:552: warning: type defaults to `int' in declaration of `gcr'
+./lj_ir.h:552: warning: data definition has no type or storage class
+./lj_ir.h:553: error: parse error before "ptr"
+./lj_ir.h:553: warning: type defaults to `int' in declaration of `ptr'
+./lj_ir.h:553: warning: data definition has no type or storage class
+./lj_ir.h:554: warning: type defaults to `int' in declaration of `IRIns'
+./lj_ir.h:554: warning: data definition has no type or storage class
+./lj_ir.h:570: error: parse error before '*' token
+./lj_ir.h: In function `ir_sideeff':
+./lj_ir.h:572: error: `ir' undeclared (first use in this function)
+In file included from ./lj_ircall.h:11,
+                 from host/buildvm.c:22:
+./lj_jit.h: At top level:
+./lj_jit.h:151: error: parse error before "MCode"
+./lj_jit.h:151: warning: type defaults to `int' in declaration of `MCode'
+./lj_jit.h:151: warning: data definition has no type or storage class
+./lj_jit.h:158: error: parse error before "uint16_t"
+./lj_jit.h:158: warning: no semicolon at end of struct or union
+./lj_jit.h:159: warning: type defaults to `int' in declaration of `ref'
+./lj_jit.h:159: warning: data definition has no type or storage class
+./lj_jit.h:160: error: parse error before "nslots"
+./lj_jit.h:160: warning: type defaults to `int' in declaration of `nslots'
+./lj_jit.h:160: warning: data definition has no type or storage class
+./lj_jit.h:161: error: parse error before "topslot"
+./lj_jit.h:161: warning: type defaults to `int' in declaration of `topslot'
+./lj_jit.h:161: warning: data definition has no type or storage class
+./lj_jit.h:162: error: parse error before "nent"
+./lj_jit.h:162: warning: type defaults to `int' in declaration of `nent'
+./lj_jit.h:162: warning: data definition has no type or storage class
+./lj_jit.h:163: error: parse error before "count"
+./lj_jit.h:163: warning: type defaults to `int' in declaration of `count'
+./lj_jit.h:163: warning: data definition has no type or storage class
+./lj_jit.h:164: warning: type defaults to `int' in declaration of `SnapShot'
+./lj_jit.h:164: warning: data definition has no type or storage class
+./lj_jit.h:169: error: parse error before "SnapEntry"
+./lj_jit.h:169: warning: type defaults to `int' in declaration of `SnapEntry'
+./lj_jit.h:169: warning: data definition has no type or storage class
+./lj_jit.h:190: error: parse error before "SnapNo"
+./lj_jit.h:190: warning: type defaults to `int' in declaration of `SnapNo'
+./lj_jit.h:190: warning: data definition has no type or storage class
+./lj_jit.h:191: error: parse error before "ExitNo"
+./lj_jit.h:191: warning: type defaults to `int' in declaration of `ExitNo'
+./lj_jit.h:191: warning: data definition has no type or storage class
+./lj_jit.h:194: error: parse error before "TraceNo"
+./lj_jit.h:194: warning: type defaults to `int' in declaration of `TraceNo'
+./lj_jit.h:194: warning: data definition has no type or storage class
+./lj_jit.h:195: error: parse error before "TraceNo1"
+./lj_jit.h:195: warning: type defaults to `int' in declaration of `TraceNo1'
+./lj_jit.h:195: warning: data definition has no type or storage class
+./lj_jit.h:212: error: parse error before "GCRef"
+./lj_jit.h:212: warning: no semicolon at end of struct or union
+./lj_jit.h:212: warning: type defaults to `int' in declaration of `marked'
+./lj_jit.h:212: warning: data definition has no type or storage class
+./lj_jit.h:212: error: parse error before "gct"
+./lj_jit.h:212: warning: type defaults to `int' in declaration of `gct'
+./lj_jit.h:212: warning: data definition has no type or storage class
+./lj_jit.h:213: error: parse error before "topslot"
+./lj_jit.h:213: warning: type defaults to `int' in declaration of `topslot'
+./lj_jit.h:213: warning: data definition has no type or storage class
+./lj_jit.h:214: error: parse error before "linktype"
+./lj_jit.h:214: warning: type defaults to `int' in declaration of `linktype'
+./lj_jit.h:214: warning: data definition has no type or storage class
+./lj_jit.h:215: error: parse error before "nins"
+./lj_jit.h:215: warning: type defaults to `int' in declaration of `nins'
+./lj_jit.h:215: warning: data definition has no type or storage class
+./lj_jit.h:219: error: parse error before "gclist"
+./lj_jit.h:219: warning: type defaults to `int' in declaration of `gclist'
+./lj_jit.h:219: warning: data definition has no type or storage class
+./lj_jit.h:220: error: parse error before '*' token
+./lj_jit.h:220: warning: type defaults to `int' in declaration of `ir'
+./lj_jit.h:220: warning: data definition has no type or storage class
+./lj_jit.h:221: error: parse error before "nk"
+./lj_jit.h:221: warning: type defaults to `int' in declaration of `nk'
+./lj_jit.h:221: warning: data definition has no type or storage class
+./lj_jit.h:222: error: parse error before "nsnap"
+./lj_jit.h:222: warning: type defaults to `int' in declaration of `nsnap'
+./lj_jit.h:222: warning: data definition has no type or storage class
+./lj_jit.h:223: error: parse error before "nsnapmap"
+./lj_jit.h:223: warning: type defaults to `int' in declaration of `nsnapmap'
+./lj_jit.h:223: warning: data definition has no type or storage class
+./lj_jit.h:224: error: parse error before '*' token
+./lj_jit.h:224: warning: type defaults to `int' in declaration of `snap'
+./lj_jit.h:224: warning: data definition has no type or storage class
+./lj_jit.h:225: error: parse error before '*' token
+./lj_jit.h:225: warning: type defaults to `int' in declaration of `snapmap'
+./lj_jit.h:225: warning: data definition has no type or storage class
+./lj_jit.h:226: error: parse error before "startpt"
+./lj_jit.h:226: warning: type defaults to `int' in declaration of `startpt'
+./lj_jit.h:226: warning: data definition has no type or storage class
+./lj_jit.h:227: error: parse error before "startpc"
+./lj_jit.h:227: warning: type defaults to `int' in declaration of `startpc'
+./lj_jit.h:227: warning: data definition has no type or storage class
+./lj_jit.h:228: error: parse error before "startins"
+./lj_jit.h:228: warning: type defaults to `int' in declaration of `startins'
+./lj_jit.h:228: warning: data definition has no type or storage class
+./lj_jit.h:229: error: parse error before "szmcode"
+./lj_jit.h:229: warning: type defaults to `int' in declaration of `szmcode'
+./lj_jit.h:229: warning: data definition has no type or storage class
+./lj_jit.h:230: error: parse error before '*' token
+./lj_jit.h:230: warning: type defaults to `int' in declaration of `mcode'
+./lj_jit.h:230: warning: data definition has no type or storage class
+./lj_jit.h:231: error: parse error before "mcloop"
+./lj_jit.h:231: warning: type defaults to `int' in declaration of `mcloop'
+./lj_jit.h:231: warning: data definition has no type or storage class
+./lj_jit.h:232: error: parse error before "nchild"
+./lj_jit.h:232: warning: type defaults to `int' in declaration of `nchild'
+./lj_jit.h:232: warning: data definition has no type or storage class
+./lj_jit.h:233: error: parse error before "spadjust"
+./lj_jit.h:233: warning: type defaults to `int' in declaration of `spadjust'
+./lj_jit.h:233: warning: data definition has no type or storage class
+./lj_jit.h:234: error: parse error before "traceno"
+./lj_jit.h:234: warning: type defaults to `int' in declaration of `traceno'
+./lj_jit.h:234: warning: data definition has no type or storage class
+./lj_jit.h:235: error: parse error before "link"
+./lj_jit.h:235: warning: type defaults to `int' in declaration of `link'
+./lj_jit.h:235: warning: data definition has no type or storage class
+./lj_jit.h:236: error: parse error before "root"
+./lj_jit.h:236: warning: type defaults to `int' in declaration of `root'
+./lj_jit.h:236: warning: data definition has no type or storage class
+./lj_jit.h:237: error: parse error before "nextroot"
+./lj_jit.h:237: warning: type defaults to `int' in declaration of `nextroot'
+./lj_jit.h:237: warning: data definition has no type or storage class
+./lj_jit.h:238: error: parse error before "nextside"
+./lj_jit.h:238: warning: type defaults to `int' in declaration of `nextside'
+./lj_jit.h:238: warning: data definition has no type or storage class
+./lj_jit.h:239: error: parse error before "sinktags"
+./lj_jit.h:239: warning: type defaults to `int' in declaration of `sinktags'
+./lj_jit.h:239: warning: data definition has no type or storage class
+./lj_jit.h:240: error: parse error before "unused1"
+./lj_jit.h:240: warning: type defaults to `int' in declaration of `unused1'
+./lj_jit.h:240: warning: data definition has no type or storage class
+./lj_jit.h:244: warning: type defaults to `int' in declaration of `GCtrace'
+./lj_jit.h:244: warning: data definition has no type or storage class
+./lj_jit.h:250: error: parse error before ')' token
+./lj_jit.h:250: error: parse error before ')' token
+./lj_jit.h:252: error: parse error before "snap_nextofs"
+./lj_jit.h:252: error: parse error before '*' token
+./lj_jit.h:253: warning: return type defaults to `int'
+./lj_jit.h: In function `snap_nextofs':
+./lj_jit.h:254: error: `T' undeclared (first use in this function)
+./lj_jit.h:257: error: request for member `mapofs' in something not a structure or union
+./lj_jit.h: At top level:
+./lj_jit.h:262: error: parse error before "MRef"
+./lj_jit.h:262: warning: no semicolon at end of struct or union
+./lj_jit.h:263: warning: type defaults to `int' in declaration of `val'
+./lj_jit.h:263: warning: data definition has no type or storage class
+./lj_jit.h:264: error: parse error before "reason"
+./lj_jit.h:264: warning: type defaults to `int' in declaration of `reason'
+./lj_jit.h:264: warning: data definition has no type or storage class
+./lj_jit.h:265: warning: type defaults to `int' in declaration of `HotPenalty'
+./lj_jit.h:265: warning: data definition has no type or storage class
+./lj_jit.h:274: error: parse error before "IRRef1"
+./lj_jit.h:274: warning: no semicolon at end of struct or union
+./lj_jit.h:275: warning: type defaults to `int' in declaration of `val'
+./lj_jit.h:275: warning: data definition has no type or storage class
+./lj_jit.h:276: error: parse error before "mode"
+./lj_jit.h:276: warning: type defaults to `int' in declaration of `mode'
+./lj_jit.h:276: warning: data definition has no type or storage class
+./lj_jit.h:277: warning: type defaults to `int' in declaration of `BPropEntry'
+./lj_jit.h:277: warning: data definition has no type or storage class
+./lj_jit.h:284: error: parse error before "MRef"
+./lj_jit.h:284: warning: no semicolon at end of struct or union
+./lj_jit.h:285: warning: type defaults to `int' in declaration of `idx'
+./lj_jit.h:285: warning: data definition has no type or storage class
+./lj_jit.h:286: error: parse error before "start"
+./lj_jit.h:286: warning: type defaults to `int' in declaration of `start'
+./lj_jit.h:286: warning: data definition has no type or storage class
+./lj_jit.h:287: error: parse error before "stop"
+./lj_jit.h:287: warning: type defaults to `int' in declaration of `stop'
+./lj_jit.h:287: warning: data definition has no type or storage class
+./lj_jit.h:288: error: parse error before "step"
+./lj_jit.h:288: warning: type defaults to `int' in declaration of `step'
+./lj_jit.h:288: warning: data definition has no type or storage class
+./lj_jit.h:289: error: parse error before "t"
+./lj_jit.h:289: warning: type defaults to `int' in declaration of `t'
+./lj_jit.h:289: warning: data definition has no type or storage class
+./lj_jit.h:290: error: parse error before "dir"
+./lj_jit.h:290: warning: type defaults to `int' in declaration of `dir'
+./lj_jit.h:290: warning: data definition has no type or storage class
+./lj_jit.h:291: warning: type defaults to `int' in declaration of `ScEvEntry'
+./lj_jit.h:291: warning: data definition has no type or storage class
+./lj_jit.h:295: error: parse error before "MRef"
+./lj_jit.h:295: warning: no semicolon at end of struct or union
+./lj_jit.h:296: warning: type defaults to `int' in declaration of `pt'
+./lj_jit.h:296: warning: data definition has no type or storage class
+./lj_jit.h:297: error: parse error before "ref"
+./lj_jit.h:297: warning: type defaults to `int' in declaration of `ref'
+./lj_jit.h:297: warning: data definition has no type or storage class
+./lj_jit.h:298: warning: type defaults to `int' in declaration of `RBCHashEntry'
+./lj_jit.h:298: warning: data definition has no type or storage class
+./lj_jit.h:325: error: parse error before "IRIns"
+./lj_jit.h:325: warning: no semicolon at end of struct or union
+./lj_jit.h:326: warning: type defaults to `int' in declaration of `left'
+./lj_jit.h:326: warning: data definition has no type or storage class
+./lj_jit.h:327: error: parse error before "right"
+./lj_jit.h:327: warning: type defaults to `int' in declaration of `right'
+./lj_jit.h:327: warning: data definition has no type or storage class
+./lj_jit.h:328: warning: type defaults to `int' in declaration of `FoldState'
+./lj_jit.h:328: warning: data definition has no type or storage class
+./lj_jit.h:332: error: parse error before "GCtrace"
+./lj_jit.h:332: warning: no semicolon at end of struct or union
+./lj_jit.h:334: error: conflicting types for 'L'
+./lj_obj.h:160: error: previous declaration of 'L' was here
+./lj_jit.h:335: error: parse error before '*' token
+./lj_jit.h:335: warning: type defaults to `int' in declaration of `pc'
+./lj_jit.h:335: error: conflicting types for 'pc'
+./lj_obj.h:449: error: previous declaration of 'pc' was here
+./lj_jit.h:335: warning: data definition has no type or storage class
+./lj_jit.h:336: error: parse error before '*' token
+./lj_jit.h:336: warning: type defaults to `int' in declaration of `fn'
+./lj_jit.h:336: error: conflicting types for 'fn'
+./lj_obj.h:714: error: previous declaration of 'fn' was here
+./lj_jit.h:336: warning: data definition has no type or storage class
+./lj_jit.h:337: error: parse error before '*' token
+./lj_jit.h:337: warning: type defaults to `int' in declaration of `pt'
+./lj_jit.h:337: error: conflicting types for 'pt'
+./lj_jit.h:296: error: previous declaration of 'pt' was here
+./lj_jit.h:337: warning: data definition has no type or storage class
+./lj_jit.h:338: error: parse error before '*' token
+./lj_jit.h:338: warning: type defaults to `int' in declaration of `base'
+./lj_jit.h:338: warning: data definition has no type or storage class
+./lj_jit.h:340: error: parse error before "flags"
+./lj_jit.h:340: warning: type defaults to `int' in declaration of `flags'
+./lj_jit.h:340: warning: data definition has no type or storage class
+./lj_jit.h:341: error: parse error before "maxslot"
+./lj_jit.h:341: warning: type defaults to `int' in declaration of `maxslot'
+./lj_jit.h:341: warning: data definition has no type or storage class
+./lj_jit.h:342: error: parse error before "baseslot"
+./lj_jit.h:342: warning: type defaults to `int' in declaration of `baseslot'
+./lj_jit.h:342: warning: data definition has no type or storage class
+./lj_jit.h:344: error: parse error before "mergesnap"
+./lj_jit.h:344: warning: type defaults to `int' in declaration of `mergesnap'
+./lj_jit.h:344: warning: data definition has no type or storage class
+./lj_jit.h:345: error: parse error before "needsnap"
+./lj_jit.h:345: warning: type defaults to `int' in declaration of `needsnap'
+./lj_jit.h:345: warning: data definition has no type or storage class
+./lj_jit.h:346: error: parse error before "guardemit"
+./lj_jit.h:346: warning: type defaults to `int' in declaration of `guardemit'
+./lj_jit.h:346: warning: data definition has no type or storage class
+./lj_jit.h:347: error: parse error before "bcskip"
+./lj_jit.h:347: warning: type defaults to `int' in declaration of `bcskip'
+./lj_jit.h:347: warning: data definition has no type or storage class
+./lj_jit.h:349: error: parse error before "fold"
+./lj_jit.h:349: warning: type defaults to `int' in declaration of `fold'
+./lj_jit.h:349: warning: data definition has no type or storage class
+./lj_jit.h:351: error: parse error before '*' token
+./lj_jit.h:351: warning: type defaults to `int' in declaration of `bc_min'
+./lj_jit.h:351: warning: data definition has no type or storage class
+./lj_jit.h:352: error: parse error before "bc_extent"
+./lj_jit.h:352: warning: type defaults to `int' in declaration of `bc_extent'
+./lj_jit.h:352: warning: data definition has no type or storage class
+./lj_jit.h:354: error: conflicting types for 'state'
+./lj_obj.h:577: error: previous declaration of 'state' was here
+./lj_jit.h:362: error: parse error before "k64"
+./lj_jit.h:362: warning: type defaults to `int' in declaration of `k64'
+./lj_jit.h:362: warning: data definition has no type or storage class
+./lj_jit.h:363: error: parse error before "ksimd"
+./lj_jit.h:363: warning: type defaults to `int' in declaration of `ksimd'
+./lj_jit.h:363: warning: data definition has no type or storage class
+./lj_jit.h:365: error: parse error before '*' token
+./lj_jit.h:365: warning: type defaults to `int' in declaration of `irbuf'
+./lj_jit.h:365: warning: data definition has no type or storage class
+./lj_jit.h:366: error: parse error before "irtoplim"
+./lj_jit.h:366: warning: type defaults to `int' in declaration of `irtoplim'
+./lj_jit.h:366: warning: data definition has no type or storage class
+./lj_jit.h:367: error: parse error before "irbotlim"
+./lj_jit.h:367: warning: type defaults to `int' in declaration of `irbotlim'
+./lj_jit.h:367: warning: data definition has no type or storage class
+./lj_jit.h:368: error: parse error before "loopref"
+./lj_jit.h:368: warning: type defaults to `int' in declaration of `loopref'
+./lj_jit.h:368: warning: data definition has no type or storage class
+./lj_jit.h:370: error: parse error before "sizesnap"
+./lj_jit.h:370: warning: type defaults to `int' in declaration of `sizesnap'
+./lj_jit.h:370: warning: data definition has no type or storage class
+./lj_jit.h:371: error: parse error before '*' token
+./lj_jit.h:371: warning: type defaults to `int' in declaration of `snapbuf'
+./lj_jit.h:371: warning: data definition has no type or storage class
+./lj_jit.h:372: error: parse error before '*' token
+./lj_jit.h:372: warning: type defaults to `int' in declaration of `snapmapbuf'
+./lj_jit.h:372: warning: data definition has no type or storage class
+./lj_jit.h:373: error: parse error before "sizesnapmap"
+./lj_jit.h:373: warning: type defaults to `int' in declaration of `sizesnapmap'
+./lj_jit.h:373: warning: data definition has no type or storage class
+./lj_jit.h:377: error: parse error before "needsplit"
+./lj_jit.h:377: warning: type defaults to `int' in declaration of `needsplit'
+./lj_jit.h:377: warning: data definition has no type or storage class
+./lj_jit.h:379: error: parse error before "retryrec"
+./lj_jit.h:379: warning: type defaults to `int' in declaration of `retryrec'
+./lj_jit.h:379: warning: data definition has no type or storage class
+./lj_jit.h:381: error: parse error before '*' token
+./lj_jit.h:381: warning: type defaults to `int' in declaration of `trace'
+./lj_jit.h:381: error: conflicting types for 'trace'
+./lj_obj.h:372: error: previous declaration of 'trace' was here
+./lj_jit.h:381: warning: data definition has no type or storage class
+./lj_jit.h:382: error: parse error before "freetrace"
+./lj_jit.h:382: warning: type defaults to `int' in declaration of `freetrace'
+./lj_jit.h:382: warning: data definition has no type or storage class
+./lj_jit.h:383: error: parse error before "sizetrace"
+./lj_jit.h:383: warning: type defaults to `int' in declaration of `sizetrace'
+./lj_jit.h:383: warning: data definition has no type or storage class
+./lj_jit.h:384: error: parse error before '*' token
+./lj_jit.h:384: warning: type defaults to `int' in declaration of `ktracep'
+./lj_jit.h:384: warning: data definition has no type or storage class
+./lj_jit.h:386: error: parse error before "chain"
+./lj_jit.h:386: warning: type defaults to `int' in declaration of `chain'
+./lj_jit.h:386: warning: data definition has no type or storage class
+./lj_jit.h:387: error: parse error before "slot"
+./lj_jit.h:387: warning: type defaults to `int' in declaration of `slot'
+./lj_jit.h:387: warning: data definition has no type or storage class
+./lj_jit.h:391: error: parse error before '*' token
+./lj_jit.h:391: warning: type defaults to `int' in declaration of `exitstubgroup'
+./lj_jit.h:391: warning: data definition has no type or storage class
+./lj_jit.h:393: error: parse error before "penalty"
+./lj_jit.h:393: warning: type defaults to `int' in declaration of `penalty'
+./lj_jit.h:393: warning: data definition has no type or storage class
+./lj_jit.h:394: error: parse error before "penaltyslot"
+./lj_jit.h:394: warning: type defaults to `int' in declaration of `penaltyslot'
+./lj_jit.h:394: warning: data definition has no type or storage class
+./lj_jit.h:395: error: parse error before "prngstate"
+./lj_jit.h:395: warning: type defaults to `int' in declaration of `prngstate'
+./lj_jit.h:395: warning: data definition has no type or storage class
+./lj_jit.h:401: error: parse error before "bpropcache"
+./lj_jit.h:401: warning: type defaults to `int' in declaration of `bpropcache'
+./lj_jit.h:401: warning: data definition has no type or storage class
+./lj_jit.h:402: error: parse error before "bpropslot"
+./lj_jit.h:402: warning: type defaults to `int' in declaration of `bpropslot'
+./lj_jit.h:402: warning: data definition has no type or storage class
+./lj_jit.h:404: error: parse error before "scev"
+./lj_jit.h:404: warning: type defaults to `int' in declaration of `scev'
+./lj_jit.h:404: warning: data definition has no type or storage class
+./lj_jit.h:406: error: parse error before '*' token
+./lj_jit.h:406: warning: type defaults to `int' in declaration of `startpc'
+./lj_jit.h:406: error: conflicting types for 'startpc'
+./lj_jit.h:227: error: previous declaration of 'startpc' was here
+./lj_jit.h:406: warning: data definition has no type or storage class
+./lj_jit.h:407: error: parse error before "parent"
+./lj_jit.h:407: warning: type defaults to `int' in declaration of `parent'
+./lj_jit.h:407: warning: data definition has no type or storage class
+./lj_jit.h:408: error: parse error before "exitno"
+./lj_jit.h:408: warning: type defaults to `int' in declaration of `exitno'
+./lj_jit.h:408: warning: data definition has no type or storage class
+./lj_jit.h:410: error: parse error before '*' token
+./lj_jit.h:410: warning: type defaults to `int' in declaration of `patchpc'
+./lj_jit.h:410: warning: data definition has no type or storage class
+./lj_jit.h:411: error: parse error before "patchins"
+./lj_jit.h:411: warning: type defaults to `int' in declaration of `patchins'
+./lj_jit.h:411: warning: data definition has no type or storage class
+./lj_jit.h:414: error: parse error before '*' token
+./lj_jit.h:414: warning: type defaults to `int' in declaration of `mcarea'
+./lj_jit.h:414: warning: data definition has no type or storage class
+./lj_jit.h:415: error: parse error before '*' token
+./lj_jit.h:415: warning: type defaults to `int' in declaration of `mctop'
+./lj_jit.h:415: warning: data definition has no type or storage class
+./lj_jit.h:416: error: parse error before '*' token
+./lj_jit.h:416: warning: type defaults to `int' in declaration of `mcbot'
+./lj_jit.h:416: warning: data definition has no type or storage class
+./lj_jit.h:420: error: parse error before "errinfo"
+./lj_jit.h:420: warning: type defaults to `int' in declaration of `errinfo'
+./lj_jit.h:420: warning: data definition has no type or storage class
+./lj_jit.h:423: error: parse error before '*' token
+./lj_jit.h:423: warning: type defaults to `int' in declaration of `prev_pt'
+./lj_jit.h:423: warning: data definition has no type or storage class
+./lj_jit.h:427: error: parse error before '}' token
+./lj_jit.h:431: warning: type defaults to `int' in declaration of `jit_State'
+./lj_jit.h:431: warning: data definition has no type or storage class
+./lj_jit.h:434: error: parse error before "LJ_PRNG_BITS"
+./lj_jit.h:434: error: parse error before '*' token
+./lj_jit.h:435: warning: return type defaults to `int'
+./lj_jit.h: In function `LJ_PRNG_BITS':
+./lj_jit.h:437: error: `J' undeclared (first use in this function)
+./lj_jit.h:438: error: `bits' undeclared (first use in this function)
+In file included from host/buildvm.c:22:
+./lj_ircall.h: At top level:
+./lj_ircall.h:16: error: parse error before "uint32_t"
+./lj_ircall.h:16: warning: no semicolon at end of struct or union
+./lj_ircall.h:17: warning: type defaults to `int' in declaration of `CCallInfo'
+./lj_ircall.h:17: warning: data definition has no type or storage class
+./lj_ircall.h:236: error: parse error before "lj_ir_call"
+./lj_ircall.h:236: error: parse error before '*' token
+./lj_ircall.h:236: warning: type defaults to `int' in declaration of `lj_ir_call'
+./lj_ircall.h:236: warning: data definition has no type or storage class
+./lj_ircall.h:238: error: parse error before "lj_ir_callinfo"
+./lj_ircall.h:238: warning: type defaults to `int' in declaration of `lj_ir_callinfo'
+./lj_ircall.h:238: warning: data definition has no type or storage class
+In file included from host/buildvm.c:24:
+./lj_dispatch.h:70: error: parse error before "HotCount"
+./lj_dispatch.h:70: warning: type defaults to `int' in declaration of `HotCount'
+./lj_dispatch.h:70: warning: data definition has no type or storage class
+./lj_dispatch.h:89: error: field `L' has incomplete type
+./lj_dispatch.h:90: error: parse error before "global_State"
+./lj_dispatch.h:90: warning: no semicolon at end of struct or union
+./lj_dispatch.h:95: warning: type defaults to `int' in declaration of `J'
+./lj_dispatch.h:95: warning: data definition has no type or storage class
+./lj_dispatch.h:96: error: parse error before "hotcount"
+./lj_dispatch.h:96: warning: type defaults to `int' in declaration of `hotcount'
+./lj_dispatch.h:96: warning: data definition has no type or storage class
+./lj_dispatch.h:99: error: parse error before "bcff"
+./lj_dispatch.h:99: warning: type defaults to `int' in declaration of `bcff'
+./lj_dispatch.h:99: warning: data definition has no type or storage class
+./lj_dispatch.h:100: error: parse error before '}' token
+./lj_dispatch.h:100: warning: type defaults to `int' in declaration of `GG_State'
+./lj_dispatch.h:100: warning: data definition has no type or storage class
+./lj_dispatch.h:121: error: parse error before '*' token
+./lj_dispatch.h:123: error: parse error before '*' token
+./lj_dispatch.h:125: error: parse error before '*' token
+./lj_dispatch.h:128: warning: type defaults to `int' in declaration of `BCIns'
+./lj_dispatch.h:128: error: parse error before '*' token
+./lj_dispatch.h:129: warning: type defaults to `int' in declaration of `BCIns'
+./lj_dispatch.h:129: error: parse error before '*' token
+./lj_dispatch.h:131: error: parse error before '*' token
+./lj_dispatch.h:134: warning: type defaults to `int' in declaration of `BCIns'
+./lj_dispatch.h:134: error: parse error before '*' token
+In file included from host/buildvm.c:26:
+./lj_ctype.h:137: error: parse error before "CTInfo"
+./lj_ctype.h:137: warning: type defaults to `int' in declaration of `CTInfo'
+./lj_ctype.h:137: warning: data definition has no type or storage class
+./lj_ctype.h:138: error: parse error before "CTSize"
+./lj_ctype.h:138: warning: type defaults to `int' in declaration of `CTSize'
+./lj_ctype.h:138: warning: data definition has no type or storage class
+./lj_ctype.h:139: error: parse error before "CTypeID"
+./lj_ctype.h:139: warning: type defaults to `int' in declaration of `CTypeID'
+./lj_ctype.h:139: warning: data definition has no type or storage class
+./lj_ctype.h:140: error: parse error before "CTypeID1"
+./lj_ctype.h:140: warning: type defaults to `int' in declaration of `CTypeID1'
+./lj_ctype.h:140: warning: data definition has no type or storage class
+./lj_ctype.h:144: error: parse error before "CTInfo"
+./lj_ctype.h:144: warning: no semicolon at end of struct or union
+./lj_ctype.h:145: warning: type defaults to `int' in declaration of `size'
+./lj_ctype.h:145: warning: data definition has no type or storage class
+./lj_ctype.h:146: error: parse error before "sib"
+./lj_ctype.h:146: warning: type defaults to `int' in declaration of `sib'
+./lj_ctype.h:146: warning: data definition has no type or storage class
+./lj_ctype.h:147: error: parse error before "next"
+./lj_ctype.h:147: warning: type defaults to `int' in declaration of `next'
+./lj_ctype.h:147: warning: data definition has no type or storage class
+./lj_ctype.h:148: error: parse error before "name"
+./lj_ctype.h:148: warning: type defaults to `int' in declaration of `name'
+./lj_ctype.h:148: warning: data definition has no type or storage class
+./lj_ctype.h:149: warning: type defaults to `int' in declaration of `CType'
+./lj_ctype.h:149: warning: data definition has no type or storage class
+./lj_ctype.h:164: error: parse error before "intptr_t"
+./lj_ctype.h:164: warning: no semicolon at end of struct or union
+./lj_ctype.h:165: warning: type defaults to `int' in declaration of `stack'
+./lj_ctype.h:165: error: conflicting types for 'stack'
+./lj_obj.h:659: error: previous declaration of 'stack' was here
+./lj_ctype.h:165: warning: data definition has no type or storage class
+./lj_ctype.h:166: error: conflicting types for 'mcode'
+./lj_jit.h:230: error: previous declaration of 'mcode' was here
+./lj_ctype.h:167: error: parse error before '*' token
+./lj_ctype.h:167: warning: type defaults to `int' in declaration of `cbid'
+./lj_ctype.h:167: warning: data definition has no type or storage class
+./lj_ctype.h:168: error: parse error before "sizeid"
+./lj_ctype.h:168: warning: type defaults to `int' in declaration of `sizeid'
+./lj_ctype.h:168: warning: data definition has no type or storage class
+./lj_ctype.h:169: error: parse error before "topid"
+./lj_ctype.h:169: warning: type defaults to `int' in declaration of `topid'
+./lj_ctype.h:169: warning: data definition has no type or storage class
+./lj_ctype.h:170: error: parse error before "slot"
+./lj_ctype.h:170: warning: type defaults to `int' in declaration of `slot'
+./lj_ctype.h:170: error: conflicting types for 'slot'
+./lj_jit.h:387: error: previous declaration of 'slot' was here
+./lj_ctype.h:170: warning: data definition has no type or storage class
+./lj_ctype.h:171: warning: type defaults to `int' in declaration of `CCallback'
+./lj_ctype.h:171: warning: data definition has no type or storage class
+./lj_ctype.h:175: error: parse error before "CType"
+./lj_ctype.h:175: warning: no semicolon at end of struct or union
+./lj_ctype.h:176: warning: type defaults to `int' in declaration of `top'
+./lj_ctype.h:176: error: conflicting types for 'top'
+./lj_obj.h:657: error: previous declaration of 'top' was here
+./lj_ctype.h:176: warning: data definition has no type or storage class
+./lj_ctype.h:177: error: parse error before "sizetab"
+./lj_ctype.h:177: warning: type defaults to `int' in declaration of `sizetab'
+./lj_ctype.h:177: warning: data definition has no type or storage class
+./lj_ctype.h:179: error: parse error before '*' token
+./lj_ctype.h:179: warning: type defaults to `int' in declaration of `g'
+./lj_ctype.h:179: warning: data definition has no type or storage class
+./lj_ctype.h:180: error: parse error before '*' token
+./lj_ctype.h:180: warning: type defaults to `int' in declaration of `finalizer'
+./lj_ctype.h:180: warning: data definition has no type or storage class
+./lj_ctype.h:181: error: parse error before '*' token
+./lj_ctype.h:181: warning: type defaults to `int' in declaration of `miscmap'
+./lj_ctype.h:181: warning: data definition has no type or storage class
+./lj_ctype.h:182: error: parse error before "cb"
+./lj_ctype.h:182: warning: type defaults to `int' in declaration of `cb'
+./lj_ctype.h:182: warning: data definition has no type or storage class
+./lj_ctype.h:183: error: parse error before "hash"
+./lj_ctype.h:183: warning: type defaults to `int' in declaration of `hash'
+./lj_ctype.h:183: error: conflicting types for 'hash'
+./lj_obj.h:295: error: previous declaration of 'hash' was here
+./lj_ctype.h:183: warning: data definition has no type or storage class
+./lj_ctype.h:184: error: parse error before '}' token
+./lj_ctype.h:184: warning: type defaults to `int' in declaration of `CTState'
+./lj_ctype.h:184: warning: data definition has no type or storage class
+./lj_ctype.h:379: error: parse error before '*' token
+./lj_ctype.h:380: warning: return type defaults to `int'
+./lj_ctype.h: In function `ctype_cts':
+./lj_ctype.h:381: error: `cts' undeclared (first use in this function)
+./lj_ctype.h:381: error: parse error before ')' token
+./lj_ctype.h:381: error: `uintptr_t' undeclared (first use in this function)
+./lj_ctype.h:381: error: parse error before ')' token
+./lj_ctype.h:381: error: dereferencing pointer to incomplete type
+./lj_ctype.h:381: error: parse error before ')' token
+./lj_ctype.h: At top level:
+./lj_ctype.h:393: error: parse error before "ctype_check"
+./lj_ctype.h:393: error: parse error before '*' token
+./lj_ctype.h:394: warning: return type defaults to `int'
+./lj_ctype.h: In function `ctype_check':
+./lj_ctype.h:395: error: `cts' undeclared (first use in this function)
+./lj_ctype.h:396: error: `id' undeclared (first use in this function)
+./lj_ctype.h: At top level:
+./lj_ctype.h:400: error: parse error before '*' token
+./lj_ctype.h:400: error: parse error before '*' token
+./lj_ctype.h:401: warning: return type defaults to `int'
+./lj_ctype.h: In function `ctype_get':
+./lj_ctype.h:402: error: `cts' undeclared (first use in this function)
+./lj_ctype.h:402: error: `id' undeclared (first use in this function)
+./lj_ctype.h: At top level:
+./lj_ctype.h:409: error: parse error before '*' token
+./lj_ctype.h:409: error: parse error before '*' token
+./lj_ctype.h:410: warning: return type defaults to `int'
+./lj_ctype.h: In function `ctype_child':
+./lj_ctype.h:413: error: `cts' undeclared (first use in this function)
+./lj_ctype.h:413: error: `ct' undeclared (first use in this function)
+./lj_ctype.h:413: error: called object is not a function
+./lj_ctype.h: At top level:
+./lj_ctype.h:417: error: parse error before '*' token
+./lj_ctype.h:417: error: parse error before '*' token
+./lj_ctype.h:418: warning: return type defaults to `int'
+./lj_ctype.h: In function `ctype_raw':
+./lj_ctype.h:419: error: `ct' undeclared (first use in this function)
+./lj_ctype.h:419: error: `cts' undeclared (first use in this function)
+./lj_ctype.h:419: error: `id' undeclared (first use in this function)
+./lj_ctype.h: At top level:
+./lj_ctype.h:425: error: parse error before '*' token
+./lj_ctype.h:425: error: parse error before '*' token
+./lj_ctype.h:426: warning: return type defaults to `int'
+./lj_ctype.h: In function `ctype_rawchild':
+./lj_ctype.h:427: error: `ct' undeclared (first use in this function)
+./lj_ctype.h:427: error: `cts' undeclared (first use in this function)
+./lj_ctype.h: At top level:
+./lj_ctype.h:432: error: parse error before '*' token
+./lj_ctype.h: In function `ctype_setname':
+./lj_ctype.h:435: error: invalid type argument of `->'
+./lj_ctype.h:436: error: `ct' undeclared (first use in this function)
+./lj_ctype.h:436: error: `uint32_t' undeclared (first use in this function)
+./lj_ctype.h:436: error: `uintptr_t' undeclared (first use in this function)
+./lj_ctype.h:436: error: parse error before ')' token
+./lj_ctype.h: At top level:
+./lj_ctype.h:439: error: parse error before "lj_ctype_new"
+./lj_ctype.h:439: error: parse error before '*' token
+./lj_ctype.h:439: warning: type defaults to `int' in declaration of `lj_ctype_new'
+./lj_ctype.h:439: warning: data definition has no type or storage class
+./lj_ctype.h:440: error: parse error before "lj_ctype_intern"
+./lj_ctype.h:440: error: parse error before '*' token
+./lj_ctype.h:440: warning: type defaults to `int' in declaration of `lj_ctype_intern'
+./lj_ctype.h:440: warning: data definition has no type or storage class
+./lj_ctype.h:441: error: parse error before '*' token
+./lj_ctype.h:442: error: parse error before "lj_ctype_getname"
+./lj_ctype.h:442: error: parse error before '*' token
+./lj_ctype.h:443: warning: type defaults to `int' in declaration of `lj_ctype_getname'
+./lj_ctype.h:443: warning: data definition has no type or storage class
+./lj_ctype.h:444: error: parse error before '*' token
+./lj_ctype.h:444: error: parse error before '*' token
+./lj_ctype.h:445: warning: type defaults to `int' in declaration of `lj_ctype_getfieldq'
+./lj_ctype.h:445: warning: data definition has no type or storage class
+./lj_ctype.h:448: error: parse error before '*' token
+./lj_ctype.h:448: error: parse error before '*' token
+./lj_ctype.h:448: warning: type defaults to `int' in declaration of `lj_ctype_rawref'
+./lj_ctype.h:448: warning: data definition has no type or storage class
+./lj_ctype.h:449: error: parse error before "lj_ctype_size"
+./lj_ctype.h:449: error: parse error before '*' token
+./lj_ctype.h:449: warning: type defaults to `int' in declaration of `lj_ctype_size'
+./lj_ctype.h:449: warning: data definition has no type or storage class
+./lj_ctype.h:450: error: parse error before "lj_ctype_vlsize"
+./lj_ctype.h:450: error: parse error before '*' token
+./lj_ctype.h:450: warning: type defaults to `int' in declaration of `lj_ctype_vlsize'
+./lj_ctype.h:450: warning: data definition has no type or storage class
+./lj_ctype.h:451: error: parse error before "lj_ctype_info"
+./lj_ctype.h:451: error: parse error before '*' token
+./lj_ctype.h:451: warning: type defaults to `int' in declaration of `lj_ctype_info'
+./lj_ctype.h:451: warning: data definition has no type or storage class
+./lj_ctype.h:452: error: parse error before '*' token
+./lj_ctype.h:452: error: parse error before '*' token
+./lj_ctype.h:452: warning: type defaults to `int' in declaration of `lj_ctype_meta'
+./lj_ctype.h:452: warning: data definition has no type or storage class
+./lj_ctype.h:453: error: parse error before '*' token
+./lj_ctype.h:453: error: parse error before "CTypeID"
+./lj_ctype.h:453: warning: type defaults to `int' in declaration of `lj_ctype_repr'
+./lj_ctype.h:453: warning: data definition has no type or storage class
+./lj_ctype.h:454: error: parse error before '*' token
+./lj_ctype.h:454: error: parse error before "uint64_t"
+./lj_ctype.h:454: warning: type defaults to `int' in declaration of `lj_ctype_repr_int64'
+./lj_ctype.h:454: warning: data definition has no type or storage class
+./lj_ctype.h:455: error: parse error before '*' token
+./lj_ctype.h:455: error: parse error before "CTSize"
+./lj_ctype.h:455: warning: type defaults to `int' in declaration of `lj_ctype_repr_complex'
+./lj_ctype.h:455: warning: data definition has no type or storage class
+./lj_ctype.h:456: error: parse error before '*' token
+./lj_ctype.h:456: warning: type defaults to `int' in declaration of `lj_ctype_init'
+./lj_ctype.h:456: warning: data definition has no type or storage class
+./lj_ctype.h:457: error: parse error before '*' token
+In file included from host/buildvm.c:27:
+./lj_ccall.h:44: error: parse error before "uint8_t"
+./lj_ccall.h:44: warning: no semicolon at end of struct or union
+./lj_ccall.h:45: warning: type defaults to `int' in declaration of `s'
+./lj_ccall.h:45: error: conflicting types for 's'
+./lj_ir.h:546: error: previous declaration of 's' was here
+./lj_ccall.h:45: warning: data definition has no type or storage class
+./lj_ccall.h:46: error: conflicting types for 'i'
+./lj_ir.h:551: error: previous declaration of 'i' was here
+./lj_ccall.h:47: error: conflicting types for 'l'
+./lj_obj.h:455: error: previous declaration of 'l' was here
+./lj_ccall.h:48: error: parse error before '}' token
+./lj_ccall.h:48: warning: type defaults to `int' in declaration of `FPRArg'
+./lj_ccall.h:48: warning: data definition has no type or storage class
+./lj_ccall.h:50: error: parse error before "GPRArg"
+./lj_ccall.h:50: warning: type defaults to `int' in declaration of `GPRArg'
+./lj_ccall.h:50: warning: data definition has no type or storage class
+./lj_ccall.h:145: error: parse error before "uint32_t"
+./lj_ccall.h:145: warning: no semicolon at end of struct or union
+./lj_ccall.h:146: warning: type defaults to `int' in declaration of `nsp'
+./lj_ccall.h:146: warning: data definition has no type or storage class
+./lj_ccall.h:147: error: parse error before "retref"
+./lj_ccall.h:147: warning: type defaults to `int' in declaration of `retref'
+./lj_ccall.h:147: warning: data definition has no type or storage class
+./lj_ccall.h:152: error: parse error before "resx87"
+./lj_ccall.h:152: warning: type defaults to `int' in declaration of `resx87'
+./lj_ccall.h:152: warning: data definition has no type or storage class
+./lj_ccall.h:162: error: parse error before "fpr"
+./lj_ccall.h:162: warning: type defaults to `int' in declaration of `fpr'
+./lj_ccall.h:162: warning: data definition has no type or storage class
+./lj_ccall.h:164: error: parse error before "gpr"
+./lj_ccall.h:164: warning: type defaults to `int' in declaration of `gpr'
+./lj_ccall.h:164: warning: data definition has no type or storage class
+./lj_ccall.h:165: error: parse error before "stack"
+./lj_ccall.h:165: warning: type defaults to `int' in declaration of `stack'
+./lj_ccall.h:165: error: conflicting types for 'stack'
+./lj_ctype.h:165: error: previous declaration of 'stack' was here
+./lj_ccall.h:165: error: conflicting types for 'stack'
+./lj_ctype.h:165: error: previous declaration of 'stack' was here
+./lj_ccall.h:165: warning: data definition has no type or storage class
+./lj_ccall.h:166: error: parse error before '}' token
+./lj_ccall.h:166: warning: type defaults to `int' in declaration of `CCallState'
+./lj_ccall.h:166: warning: data definition has no type or storage class
+./lj_ccall.h:171: error: parse error before '*' token
+./lj_ccall.h:173: error: parse error before "lj_ccall_ctid_vararg"
+./lj_ccall.h:173: error: parse error before '*' token
+./lj_ccall.h:173: warning: type defaults to `int' in declaration of `lj_ccall_ctid_vararg'
+./lj_ccall.h:173: warning: data definition has no type or storage class
+./lj_ccall.h:174: error: parse error before "GCcdata"
+In file included from host/buildvm.c:44:
+./../dynasm/dasm_proto.h:51: error: parse error before '*' token
+./../dynasm/dasm_proto.h:52: error: parse error before '*' token
+./../dynasm/dasm_proto.h:55: error: parse error before '*' token
+./../dynasm/dasm_proto.h:58: error: parse error before '*' token
+./../dynasm/dasm_proto.h:61: error: parse error before '*' token
+./../dynasm/dasm_proto.h:64: error: parse error before '*' token
+./../dynasm/dasm_proto.h:67: error: parse error before '*' token
+./../dynasm/dasm_proto.h:70: error: parse error before '*' token
+./../dynasm/dasm_proto.h:73: error: parse error before '*' token
+./../dynasm/dasm_proto.h:77: error: parse error before '*' token
+host/buildvm.c:47: error: parse error before '*' token
+In file included from host/buildvm.c:59:
+./../dynasm/dasm_x86.h:84: error: parse error before '*' token
+./../dynasm/dasm_x86.h: In function `dasm_init':
+./../dynasm/dasm_x86.h:89: error: `ctx' undeclared (first use in this function)
+./../dynasm/dasm_x86.h:90: error: `maxsection' undeclared (first use in this function)
+./../dynasm/dasm_x86.h: At top level:
+./../dynasm/dasm_x86.h:108: error: parse error before '*' token
+./../dynasm/dasm_x86.h: In function `dasm_free':
+./../dynasm/dasm_x86.h:110: error: `ctx' undeclared (first use in this function)
+./../dynasm/dasm_x86.h: At top level:
+./../dynasm/dasm_x86.h:121: error: parse error before '*' token
+./../dynasm/dasm_x86.h: In function `dasm_setupglobal':
+./../dynasm/dasm_x86.h:123: error: `ctx' undeclared (first use in this function)
+./../dynasm/dasm_x86.h:124: error: `gl' undeclared (first use in this function)
+./../dynasm/dasm_x86.h:125: error: `maxgl' undeclared (first use in this function)
+./../dynasm/dasm_x86.h: At top level:
+./../dynasm/dasm_x86.h:129: error: parse error before '*' token
+./../dynasm/dasm_x86.h: In function `dasm_growpc':
+./../dynasm/dasm_x86.h:131: error: `ctx' undeclared (first use in this function)
+./../dynasm/dasm_x86.h:133: error: `maxpc' undeclared (first use in this function)
+./../dynasm/dasm_x86.h: At top level:
+./../dynasm/dasm_x86.h:138: error: parse error before '*' token
+./../dynasm/dasm_x86.h: In function `dasm_setup':
+./../dynasm/dasm_x86.h:140: error: `ctx' undeclared (first use in this function)
+./../dynasm/dasm_x86.h:142: error: `actionlist' undeclared (first use in this function)
+./../dynasm/dasm_x86.h: At top level:
+./../dynasm/dasm_x86.h:167: error: parse error before '*' token
+./../dynasm/dasm_x86.h: In function `dasm_put':
+./../dynasm/dasm_x86.h:170: error: `ctx' undeclared (first use in this function)
+./../dynasm/dasm_x86.h: At top level:
+./../dynasm/dasm_x86.h:273: error: parse error before '*' token
+./../dynasm/dasm_x86.h: In function `dasm_link':
+./../dynasm/dasm_x86.h:275: error: `ctx' undeclared (first use in this function)
+./../dynasm/dasm_x86.h:280: error: `szp' undeclared (first use in this function)
+./../dynasm/dasm_x86.h: At top level:
+./../dynasm/dasm_x86.h:367: error: parse error before '*' token
+./../dynasm/dasm_x86.h: In function `dasm_encode':
+./../dynasm/dasm_x86.h:369: error: `ctx' undeclared (first use in this function)
+./../dynasm/dasm_x86.h:370: error: `buffer' undeclared (first use in this function)
+./../dynasm/dasm_x86.h: At top level:
+./../dynasm/dasm_x86.h:469: error: parse error before '*' token
+./../dynasm/dasm_x86.h: In function `dasm_getpclabel':
+./../dynasm/dasm_x86.h:471: error: `ctx' undeclared (first use in this function)
+./../dynasm/dasm_x86.h:472: error: invalid operands to binary *
+./../dynasm/dasm_x86.h:473: error: array subscript is not an integer
+./../dynasm/dasm_x86.h: At top level:
+./../dynasm/dasm_x86.h:482: error: parse error before '*' token
+./../dynasm/dasm_x86.h: In function `dasm_checkstep':
+./../dynasm/dasm_x86.h:484: error: `ctx' undeclared (first use in this function)
+./../dynasm/dasm_x86.h:492: error: `secmatch' undeclared (first use in this function)
+In file included from host/buildvm.c:73:
+vm_x86.dasc: At top level:
+vm_x86.dasc:15: error: conflicting types for 'globnames'
+host/buildvm.h:84: error: previous declaration of 'globnames' was here
+vm_x86.dasc:16: error: conflicting types for 'extnames'
+host/buildvm.h:85: error: previous declaration of 'extnames' was here
+vm_x86.dasc:439: error: parse error before '*' token
+vm_x86.dasc: In function `build_subroutines':
+vm_x86.dasc:442: error: `ctx' undeclared (first use in this function)
+vm_x86.dasc:486: error: parse error before ')' token
+vm_x86.dasc:486: error: parse error before ')' token
+vm_x86.dasc:486: error: parse error before ')' token
+vm_x86.dasc:521: error: dereferencing pointer to incomplete type
+vm_x86.dasc:521: error: dereferencing pointer to incomplete type
+vm_x86.dasc:521: error: dereferencing pointer to incomplete type
+vm_x86.dasc:521: error: dereferencing pointer to incomplete type
+vm_x86.dasc:560: error: dereferencing pointer to incomplete type
+vm_x86.dasc:560: error: dereferencing pointer to incomplete type
+vm_x86.dasc:599: error: dereferencing pointer to incomplete type
+vm_x86.dasc:599: error: parse error before ')' token
+vm_x86.dasc:599: error: `intptr_t' undeclared (first use in this function)
+vm_x86.dasc:599: error: dereferencing pointer to incomplete type
+vm_x86.dasc:599: error: dereferencing pointer to incomplete type
+vm_x86.dasc:599: error: parse error before ')' token
+vm_x86.dasc:599: error: parse error before ')' token
+vm_x86.dasc:599: error: parse error before ')' token
+vm_x86.dasc:599: error: parse error before ')' token
+vm_x86.dasc:599: error: parse error before ')' token
+vm_x86.dasc:648: error: parse error before ')' token
+vm_x86.dasc:648: error: dereferencing pointer to incomplete type
+vm_x86.dasc:648: error: dereferencing pointer to incomplete type
+vm_x86.dasc:648: error: dereferencing pointer to incomplete type
+vm_x86.dasc:648: error: dereferencing pointer to incomplete type
+vm_x86.dasc:648: error: parse error before ')' token
+vm_x86.dasc:648: error: dereferencing pointer to incomplete type
+vm_x86.dasc:686: error: parse error before ')' token
+vm_x86.dasc:686: error: parse error before ')' token
+vm_x86.dasc:686: error: dereferencing pointer to incomplete type
+vm_x86.dasc:686: error: dereferencing pointer to incomplete type
+vm_x86.dasc:686: error: parse error before ')' token
+vm_x86.dasc:686: error: parse error before ')' token
+vm_x86.dasc:686: error: parse error before ')' token
+vm_x86.dasc:686: error: parse error before ')' token
+vm_x86.dasc:686: error: parse error before ')' token
+vm_x86.dasc:686: error: parse error before ')' token
+vm_x86.dasc:686: error: dereferencing pointer to incomplete type
+vm_x86.dasc:686: error: dereferencing pointer to incomplete type
+vm_x86.dasc:686: error: dereferencing pointer to incomplete type
+vm_x86.dasc:735: error: dereferencing pointer to incomplete type
+vm_x86.dasc:735: error: dereferencing pointer to incomplete type
+vm_x86.dasc:735: error: parse error before ')' token
+vm_x86.dasc:735: error: parse error before ')' token
+vm_x86.dasc:735: error: dereferencing pointer to incomplete type
+vm_x86.dasc:735: error: parse error before ')' token
+vm_x86.dasc:735: error: parse error before ')' token
+vm_x86.dasc:735: error: parse error before ')' token
+vm_x86.dasc:735: error: parse error before ')' token
+vm_x86.dasc:735: error: parse error before ')' token
+vm_x86.dasc:735: error: parse error before ')' token
+vm_x86.dasc:735: error: dereferencing pointer to incomplete type
+vm_x86.dasc:735: error: dereferencing pointer to incomplete type
+vm_x86.dasc:735: error: parse error before ')' token
+vm_x86.dasc:820: error: dereferencing pointer to incomplete type
+vm_x86.dasc:820: error: dereferencing pointer to incomplete type
+vm_x86.dasc:820: error: dereferencing pointer to incomplete type
+vm_x86.dasc:820: error: parse error before ')' token
+vm_x86.dasc:820: error: parse error before ')' token
+vm_x86.dasc:820: error: dereferencing pointer to incomplete type
+vm_x86.dasc:820: error: dereferencing pointer to incomplete type
+vm_x86.dasc:820: error: parse error before ')' token
+vm_x86.dasc:820: error: parse error before ')' token
+vm_x86.dasc:820: error: parse error before ')' token
+vm_x86.dasc:820: error: parse error before ')' token
+vm_x86.dasc:820: error: parse error before ')' token
+vm_x86.dasc:875: error: parse error before ')' token
+vm_x86.dasc:875: error: parse error before ')' token
+vm_x86.dasc:875: error: parse error before ')' token
+vm_x86.dasc:945: error: dereferencing pointer to incomplete type
+vm_x86.dasc:945: error: dereferencing pointer to incomplete type
+vm_x86.dasc:945: error: dereferencing pointer to incomplete type
+vm_x86.dasc:994: error: parse error before ')' token
+vm_x86.dasc:994: error: parse error before ')' token
+vm_x86.dasc:994: error: parse error before ')' token
+vm_x86.dasc:994: error: dereferencing pointer to incomplete type
+vm_x86.dasc:1096: error: dereferencing pointer to incomplete type
+vm_x86.dasc:1096: error: dereferencing pointer to incomplete type
+vm_x86.dasc:1096: error: dereferencing pointer to incomplete type
+vm_x86.dasc:1096: error: dereferencing pointer to incomplete type
+vm_x86.dasc:1096: error: dereferencing pointer to incomplete type
+vm_x86.dasc:1145: error: dereferencing pointer to incomplete type
+vm_x86.dasc:1206: error: dereferencing pointer to incomplete type
+vm_x86.dasc:1206: error: dereferencing pointer to incomplete type
+vm_x86.dasc:1206: error: dereferencing pointer to incomplete type
+vm_x86.dasc:1263: error: dereferencing pointer to incomplete type
+vm_x86.dasc:1263: error: dereferencing pointer to incomplete type
+vm_x86.dasc:1263: error: dereferencing pointer to incomplete type
+vm_x86.dasc:1263: error: dereferencing pointer to incomplete type
+vm_x86.dasc:1395: error: dereferencing pointer to incomplete type
+vm_x86.dasc:1395: error: dereferencing pointer to incomplete type
+vm_x86.dasc:1395: error: parse error before ')' token
+vm_x86.dasc:1395: error: dereferencing pointer to incomplete type
+vm_x86.dasc:1395: error: dereferencing pointer to incomplete type
+vm_x86.dasc:1441: error: parse error before ')' token
+vm_x86.dasc:1461: error: parse error before ')' token
+vm_x86.dasc:1461: error: parse error before ')' token
+vm_x86.dasc:1461: error: parse error before ')' token
+vm_x86.dasc:1461: error: parse error before ')' token
+vm_x86.dasc:1461: error: parse error before ')' token
+vm_x86.dasc:1461: error: parse error before ')' token
+vm_x86.dasc:1461: error: parse error before ')' token
+vm_x86.dasc:1461: error: parse error before ')' token
+vm_x86.dasc:1485: error: parse error before ')' token
+vm_x86.dasc:1485: error: parse error before ')' token
+vm_x86.dasc:1498: error: parse error before ')' token
+vm_x86.dasc:1498: error: parse error before ')' token
+vm_x86.dasc:1498: error: parse error before ')' token
+vm_x86.dasc:1498: error: parse error before ')' token
+vm_x86.dasc:1512: error: parse error before ')' token
+vm_x86.dasc:1512: error: parse error before ')' token
+vm_x86.dasc:1512: error: parse error before ')' token
+vm_x86.dasc:1512: error: `uint8_t' undeclared (first use in this function)
+vm_x86.dasc:1512: error: parse error before '~' token
+vm_x86.dasc:1580: error: parse error before ')' token
+vm_x86.dasc:1580: error: parse error before ')' token
+vm_x86.dasc:1580: error: parse error before ')' token
+vm_x86.dasc:1580: error: parse error before ')' token
+vm_x86.dasc:1580: error: parse error before ')' token
+vm_x86.dasc:1580: error: parse error before ')' token
+vm_x86.dasc:1580: error: parse error before ')' token
+vm_x86.dasc:1580: error: parse error before ')' token
+vm_x86.dasc:1580: error: parse error before ')' token
+vm_x86.dasc:1633: error: dereferencing pointer to incomplete type
+vm_x86.dasc:1633: error: dereferencing pointer to incomplete type
+vm_x86.dasc:1633: error: dereferencing pointer to incomplete type
+vm_x86.dasc:1633: error: dereferencing pointer to incomplete type
+vm_x86.dasc:1633: error: dereferencing pointer to incomplete type
+vm_x86.dasc:1692: error: parse error before ')' token
+vm_x86.dasc:1692: error: parse error before ')' token
+vm_x86.dasc:1719: error: parse error before ')' token
+vm_x86.dasc:1719: error: parse error before ')' token
+vm_x86.dasc:1756: error: parse error before ')' token
+vm_x86.dasc:1756: error: parse error before ')' token
+vm_x86.dasc:1756: error: parse error before ')' token
+vm_x86.dasc:1756: error: parse error before ')' token
+vm_x86.dasc:1945: error: dereferencing pointer to incomplete type
+vm_x86.dasc:1945: error: dereferencing pointer to incomplete type
+vm_x86.dasc:1946: error: dereferencing pointer to incomplete type
+vm_x86.dasc:1946: error: dereferencing pointer to incomplete type
+vm_x86.dasc:1946: error: dereferencing pointer to incomplete type
+vm_x86.dasc:1946: error: dereferencing pointer to incomplete type
+vm_x86.dasc:1946: error: dereferencing pointer to incomplete type
+vm_x86.dasc:1946: error: dereferencing pointer to incomplete type
+vm_x86.dasc:1947: error: dereferencing pointer to incomplete type
+vm_x86.dasc:1947: error: parse error before ')' token
+vm_x86.dasc:1947: error: parse error before ')' token
+vm_x86.dasc:1947: error: parse error before ')' token
+vm_x86.dasc:1947: error: parse error before ')' token
+vm_x86.dasc:1947: error: parse error before ')' token
+vm_x86.dasc:1947: error: parse error before ')' token
+vm_x86.dasc:1947: error: dereferencing pointer to incomplete type
+vm_x86.dasc:1947: error: dereferencing pointer to incomplete type
+vm_x86.dasc:1947: error: dereferencing pointer to incomplete type
+vm_x86.dasc:1947: error: dereferencing pointer to incomplete type
+vm_x86.dasc:1948: error: dereferencing pointer to incomplete type
+vm_x86.dasc:1948: error: dereferencing pointer to incomplete type
+vm_x86.dasc:1948: error: dereferencing pointer to incomplete type
+vm_x86.dasc:1946: error: dereferencing pointer to incomplete type
+vm_x86.dasc:1946: error: parse error before ')' token
+vm_x86.dasc:1946: error: dereferencing pointer to incomplete type
+vm_x86.dasc:1946: error: dereferencing pointer to incomplete type
+vm_x86.dasc:1946: error: dereferencing pointer to incomplete type
+vm_x86.dasc:1946: error: dereferencing pointer to incomplete type
+vm_x86.dasc:1947: error: dereferencing pointer to incomplete type
+vm_x86.dasc:1947: error: dereferencing pointer to incomplete type
+vm_x86.dasc:1947: error: dereferencing pointer to incomplete type
+vm_x86.dasc:1947: error: dereferencing pointer to incomplete type
+vm_x86.dasc:1947: error: dereferencing pointer to incomplete type
+vm_x86.dasc:1947: error: parse error before ')' token
+vm_x86.dasc:1947: error: parse error before ')' token
+vm_x86.dasc:1947: error: parse error before ')' token
+vm_x86.dasc:1947: error: parse error before ')' token
+vm_x86.dasc:1947: error: parse error before ')' token
+vm_x86.dasc:1947: error: parse error before ')' token
+vm_x86.dasc:1948: error: dereferencing pointer to incomplete type
+vm_x86.dasc:1948: error: dereferencing pointer to incomplete type
+vm_x86.dasc:1948: error: dereferencing pointer to incomplete type
+vm_x86.dasc:1948: error: dereferencing pointer to incomplete type
+vm_x86.dasc:1968: error: dereferencing pointer to incomplete type
+vm_x86.dasc:1968: error: dereferencing pointer to incomplete type
+vm_x86.dasc:1968: error: dereferencing pointer to incomplete type
+vm_x86.dasc:1968: error: dereferencing pointer to incomplete type
+vm_x86.dasc:1968: error: dereferencing pointer to incomplete type
+vm_x86.dasc:1968: error: dereferencing pointer to incomplete type
+vm_x86.dasc:1968: error: dereferencing pointer to incomplete type
+vm_x86.dasc:2230: error: parse error before ')' token
+vm_x86.dasc:2230: error: parse error before ')' token
+vm_x86.dasc:2266: error: parse error before ')' token
+vm_x86.dasc:2266: error: parse error before ')' token
+vm_x86.dasc:2266: error: parse error before ')' token
+vm_x86.dasc:2266: error: parse error before ')' token
+vm_x86.dasc:2266: error: parse error before ')' token
+vm_x86.dasc:2266: error: parse error before ')' token
+vm_x86.dasc:2266: error: dereferencing pointer to incomplete type
+vm_x86.dasc:2266: error: dereferencing pointer to incomplete type
+vm_x86.dasc:2283: error: parse error before ')' token
+vm_x86.dasc:2283: error: parse error before ')' token
+vm_x86.dasc:2283: error: parse error before ')' token
+vm_x86.dasc:2283: error: parse error before ')' token
+vm_x86.dasc:2283: error: parse error before ')' token
+vm_x86.dasc:2283: error: parse error before ')' token
+vm_x86.dasc:2324: error: parse error before ')' token
+vm_x86.dasc:2363: error: parse error before ')' token
+vm_x86.dasc:2363: error: parse error before ')' token
+vm_x86.dasc:2363: error: parse error before ')' token
+vm_x86.dasc:2363: error: parse error before ')' token
+vm_x86.dasc:2363: error: parse error before ')' token
+vm_x86.dasc:2363: error: parse error before ')' token
+vm_x86.dasc:2363: error: parse error before ')' token
+vm_x86.dasc:2363: error: parse error before ')' token
+vm_x86.dasc:2363: error: parse error before ')' token
+vm_x86.dasc:2363: error: dereferencing pointer to incomplete type
+vm_x86.dasc:2363: error: parse error before ')' token
+vm_x86.dasc:2363: error: parse error before ')' token
+vm_x86.dasc:2363: error: parse error before ')' token
+vm_x86.dasc:2364: error: parse error before ')' token
+vm_x86.dasc:2364: error: parse error before ')' token
+vm_x86.dasc:2364: error: parse error before ')' token
+vm_x86.dasc:2364: error: parse error before ')' token
+vm_x86.dasc:2364: error: parse error before ')' token
+vm_x86.dasc:2364: error: parse error before ')' token
+vm_x86.dasc:2364: error: parse error before ')' token
+vm_x86.dasc:2364: error: parse error before ')' token
+vm_x86.dasc:2364: error: parse error before ')' token
+vm_x86.dasc:2364: error: dereferencing pointer to incomplete type
+vm_x86.dasc:2364: error: parse error before ')' token
+vm_x86.dasc:2364: error: parse error before ')' token
+vm_x86.dasc:2364: error: parse error before ')' token
+vm_x86.dasc:2400: error: parse error before ')' token
+vm_x86.dasc:2400: error: parse error before ')' token
+vm_x86.dasc:2400: error: parse error before ')' token
+vm_x86.dasc:2400: error: parse error before ')' token
+vm_x86.dasc:2400: error: parse error before ')' token
+vm_x86.dasc:2400: error: parse error before ')' token
+vm_x86.dasc:2400: error: parse error before ')' token
+vm_x86.dasc:2400: error: parse error before ')' token
+vm_x86.dasc:2400: error: parse error before ')' token
+vm_x86.dasc:2400: error: dereferencing pointer to incomplete type
+vm_x86.dasc:2400: error: parse error before ')' token
+vm_x86.dasc:2400: error: parse error before ')' token
+vm_x86.dasc:2400: error: parse error before ')' token
+vm_x86.dasc:2502: error: dereferencing pointer to incomplete type
+vm_x86.dasc:2502: error: dereferencing pointer to incomplete type
+vm_x86.dasc:2502: error: dereferencing pointer to incomplete type
+vm_x86.dasc:2502: error: parse error before ')' token
+vm_x86.dasc:2502: error: dereferencing pointer to incomplete type
+vm_x86.dasc:2533: error: dereferencing pointer to incomplete type
+vm_x86.dasc:2533: error: parse error before ')' token
+vm_x86.dasc:2533: error: dereferencing pointer to incomplete type
+vm_x86.dasc:2571: error: dereferencing pointer to incomplete type
+vm_x86.dasc:2571: error: dereferencing pointer to incomplete type
+vm_x86.dasc:2571: error: dereferencing pointer to incomplete type
+vm_x86.dasc:2571: error: dereferencing pointer to incomplete type
+vm_x86.dasc:2571: error: parse error before ')' token
+vm_x86.dasc:2571: error: parse error before ')' token
+vm_x86.dasc:2571: error: parse error before ')' token
+vm_x86.dasc:2571: error: parse error before ')' token
+vm_x86.dasc:2571: error: parse error before ')' token
+vm_x86.dasc:2571: error: parse error before ')' token
+vm_x86.dasc:2589: error: parse error before ')' token
+vm_x86.dasc:2589: error: parse error before ')' token
+vm_x86.dasc:2589: error: parse error before ')' token
+vm_x86.dasc:2589: error: parse error before ')' token
+vm_x86.dasc:2589: error: parse error before ')' token
+vm_x86.dasc:2589: error: parse error before ')' token
+vm_x86.dasc:2589: error: parse error before ')' token
+vm_x86.dasc:2589: error: parse error before ')' token
+vm_x86.dasc:2589: error: parse error before ')' token
+vm_x86.dasc:2628: error: dereferencing pointer to incomplete type
+vm_x86.dasc:2628: error: dereferencing pointer to incomplete type
+vm_x86.dasc:2628: error: parse error before ')' token
+vm_x86.dasc:2628: error: parse error before ')' token
+vm_x86.dasc:2628: error: dereferencing pointer to incomplete type
+vm_x86.dasc:2628: error: dereferencing pointer to incomplete type
+vm_x86.dasc:2628: error: parse error before ')' token
+vm_x86.dasc:2628: error: parse error before ')' token
+vm_x86.dasc:2694: error: parse error before ')' token
+vm_x86.dasc:2694: error: parse error before ')' token
+vm_x86.dasc:2694: error: parse error before ')' token
+vm_x86.dasc:2694: error: dereferencing pointer to incomplete type
+vm_x86.dasc:2694: error: dereferencing pointer to incomplete type
+vm_x86.dasc:2694: error: dereferencing pointer to incomplete type
+vm_x86.dasc:2694: error: dereferencing pointer to incomplete type
+vm_x86.dasc:2728: error: parse error before ')' token
+vm_x86.dasc:2728: error: parse error before ')' token
+vm_x86.dasc:2728: error: parse error before ')' token
+vm_x86.dasc:2728: error: parse error before ')' token
+vm_x86.dasc:2728: error: parse error before ')' token
+vm_x86.dasc:2728: error: dereferencing pointer to incomplete type
+vm_x86.dasc:2728: error: parse error before ')' token
+vm_x86.dasc:2728: error: parse error before ')' token
+vm_x86.dasc:2728: error: parse error before ')' token
+vm_x86.dasc:2728: error: parse error before ')' token
+vm_x86.dasc:2728: error: parse error before ')' token
+vm_x86.dasc:2728: error: dereferencing pointer to incomplete type
+vm_x86.dasc:2738: error: dereferencing pointer to incomplete type
+vm_x86.dasc:2738: error: dereferencing pointer to incomplete type
+vm_x86.dasc:2851: error: parse error before ')' token
+vm_x86.dasc:2851: error: parse error before ')' token
+vm_x86.dasc:2851: error: parse error before ')' token
+vm_x86.dasc:2851: error: parse error before ')' token
+vm_x86.dasc:2851: error: parse error before ')' token
+vm_x86.dasc:2851: error: parse error before ')' token
+vm_x86.dasc:2851: error: parse error before ')' token
+vm_x86.dasc:2851: error: parse error before ')' token
+vm_x86.dasc:2851: error: parse error before ')' token
+vm_x86.dasc:2851: error: parse error before ')' token
+vm_x86.dasc:2851: error: parse error before ')' token
+vm_x86.dasc:2851: error: parse error before ')' token
+vm_x86.dasc:2851: error: parse error before ')' token
+vm_x86.dasc:2851: error: parse error before ')' token
+vm_x86.dasc:2851: error: parse error before ')' token
+vm_x86.dasc:2851: error: parse error before ')' token
+vm_x86.dasc:2851: error: parse error before ')' token
+vm_x86.dasc:2851: error: parse error before ')' token
+vm_x86.dasc:2851: error: parse error before ')' token
+vm_x86.dasc:2851: error: parse error before ')' token
+vm_x86.dasc:2851: error: parse error before ')' token
+vm_x86.dasc:2851: error: dereferencing pointer to incomplete type
+vm_x86.dasc:2851: error: parse error before ')' token
+vm_x86.dasc:2851: error: parse error before ')' token
+vm_x86.dasc:2851: error: parse error before ')' token
+vm_x86.dasc:2851: error: parse error before ')' token
+vm_x86.dasc:2851: error: parse error before ')' token
+vm_x86.dasc:2851: error: dereferencing pointer to incomplete type
+vm_x86.dasc:2851: error: dereferencing pointer to incomplete type
+vm_x86.dasc:2900: error: parse error before ')' token
+vm_x86.dasc:2900: error: parse error before ')' token
+vm_x86.dasc:2900: error: dereferencing pointer to incomplete type
+vm_x86.dasc:2900: error: parse error before ')' token
+vm_x86.dasc:2900: error: parse error before ')' token
+vm_x86.dasc:2900: error: parse error before ')' token
+vm_x86.dasc:2900: error: parse error before ')' token
+vm_x86.dasc:2900: error: parse error before ')' token
+vm_x86.dasc:2900: error: parse error before ')' token
+vm_x86.dasc:2967: error: parse error before ')' token
+vm_x86.dasc:2967: error: parse error before ')' token
+vm_x86.dasc:3159: error: parse error before ')' token
+vm_x86.dasc:3159: error: parse error before ')' token
+vm_x86.dasc:3159: error: parse error before ')' token
+vm_x86.dasc:3159: error: parse error before ')' token
+vm_x86.dasc:3159: error: parse error before ')' token
+vm_x86.dasc:3159: error: parse error before ')' token
+vm_x86.dasc:3159: error: parse error before ')' token
+vm_x86.dasc:3159: error: parse error before ')' token
+vm_x86.dasc:3159: error: parse error before ')' token
+vm_x86.dasc:3159: error: parse error before ')' token
+vm_x86.dasc:3159: error: dereferencing pointer to incomplete type
+vm_x86.dasc:3159: error: dereferencing pointer to incomplete type
+vm_x86.dasc:3159: error: parse error before ')' token
+vm_x86.dasc:3159: error: parse error before ')' token
+vm_x86.dasc:3159: error: parse error before ')' token
+vm_x86.dasc:3159: error: parse error before ')' token
+vm_x86.dasc:3159: error: parse error before ')' token
+vm_x86.dasc:3159: error: dereferencing pointer to incomplete type
+vm_x86.dasc:3215: error: dereferencing pointer to incomplete type
+vm_x86.dasc:3215: error: parse error before ')' token
+vm_x86.dasc:3215: error: parse error before ')' token
+vm_x86.dasc:3215: error: parse error before ')' token
+vm_x86.dasc:3215: error: parse error before ')' token
+vm_x86.dasc:3215: error: parse error before ')' token
+vm_x86.dasc:3215: error: dereferencing pointer to incomplete type
+vm_x86.dasc:3215: error: parse error before ')' token
+vm_x86.dasc:3215: error: parse error before ')' token
+vm_x86.dasc:3215: error: parse error before ')' token
+vm_x86.dasc:3275: error: parse error before ')' token
+vm_x86.dasc:3275: error: parse error before ')' token
+vm_x86.dasc:3275: error: parse error before ')' token
+vm_x86.dasc:3275: error: parse error before ')' token
+vm_x86.dasc:3275: error: parse error before ')' token
+vm_x86.dasc:3275: error: parse error before ')' token
+vm_x86.dasc:3275: error: parse error before ')' token
+vm_x86.dasc:3275: error: parse error before ')' token
+vm_x86.dasc:3290: error: parse error before ')' token
+vm_x86.dasc:3290: error: parse error before ')' token
+vm_x86.dasc: At top level:
+vm_x86.dasc:3293: error: parse error before '*' token
+vm_x86.dasc: In function `build_ins':
+vm_x86.dasc:3298: error: `ctx' undeclared (first use in this function)
+vm_x86.dasc:3298: error: `defop' undeclared (first use in this function)
+vm_x86.dasc:3299: error: `op' undeclared (first use in this function)
+vm_x86.dasc:3486: error: parse error before ')' token
+vm_x86.dasc:3487: error: parse error before ')' token
+vm_x86.dasc:3695: error: parse error before ')' token
+vm_x86.dasc:3882: error: dereferencing pointer to incomplete type
+vm_x86.dasc:3882: error: dereferencing pointer to incomplete type
+vm_x86.dasc:3957: error: parse error before ')' token
+vm_x86.dasc:3957: error: parse error before ')' token
+vm_x86.dasc:3989: error: parse error before ')' token
+vm_x86.dasc:3989: error: parse error before ')' token
+vm_x86.dasc:3989: error: parse error before ')' token
+vm_x86.dasc:3989: error: parse error before ')' token
+vm_x86.dasc:3989: error: parse error before ')' token
+vm_x86.dasc:3989: error: parse error before ')' token
+vm_x86.dasc:3994: error: parse error before ')' token
+vm_x86.dasc:3994: error: parse error before ')' token
+vm_x86.dasc:4021: error: parse error before ')' token
+vm_x86.dasc:4021: error: parse error before ')' token
+vm_x86.dasc:4021: error: parse error before ')' token
+vm_x86.dasc:4021: error: parse error before ')' token
+vm_x86.dasc:4021: error: parse error before ')' token
+vm_x86.dasc:4021: error: parse error before ')' token
+vm_x86.dasc:4021: error: parse error before ')' token
+vm_x86.dasc:4030: error: parse error before ')' token
+vm_x86.dasc:4030: error: parse error before ')' token
+vm_x86.dasc:4038: error: parse error before ')' token
+vm_x86.dasc:4038: error: parse error before ')' token
+vm_x86.dasc:4052: error: dereferencing pointer to incomplete type
+vm_x86.dasc:4052: error: dereferencing pointer to incomplete type
+vm_x86.dasc:4052: error: dereferencing pointer to incomplete type
+vm_x86.dasc:4080: error: dereferencing pointer to incomplete type
+vm_x86.dasc:4080: error: dereferencing pointer to incomplete type
+vm_x86.dasc:4128: error: dereferencing pointer to incomplete type
+vm_x86.dasc:4128: error: parse error before ')' token
+vm_x86.dasc:4128: error: parse error before ')' token
+vm_x86.dasc:4128: error: parse error before ')' token
+vm_x86.dasc:4128: error: parse error before ')' token
+vm_x86.dasc:4128: error: parse error before ')' token
+vm_x86.dasc:4128: error: parse error before ')' token
+vm_x86.dasc:4128: error: dereferencing pointer to incomplete type
+vm_x86.dasc:4153: error: parse error before ')' token
+vm_x86.dasc:4153: error: parse error before ')' token
+vm_x86.dasc:4153: error: parse error before ')' token
+vm_x86.dasc:4153: error: parse error before ')' token
+vm_x86.dasc:4153: error: parse error before ')' token
+vm_x86.dasc:4153: error: parse error before ')' token
+vm_x86.dasc:4153: error: dereferencing pointer to incomplete type
+vm_x86.dasc:4153: error: dereferencing pointer to incomplete type
+vm_x86.dasc:4161: error: parse error before ')' token
+vm_x86.dasc:4168: error: parse error before ')' token
+vm_x86.dasc:4211: error: parse error before ')' token
+vm_x86.dasc:4211: error: parse error before ')' token
+vm_x86.dasc:4211: error: parse error before ')' token
+vm_x86.dasc:4222: error: parse error before ')' token
+vm_x86.dasc:4222: error: parse error before ')' token
+vm_x86.dasc:4243: error: parse error before ')' token
+vm_x86.dasc:4243: error: parse error before ')' token
+vm_x86.dasc:4243: error: parse error before ')' token
+vm_x86.dasc:4243: error: parse error before ')' token
+vm_x86.dasc:4243: error: parse error before ')' token
+vm_x86.dasc:4274: error: parse error before ')' token
+vm_x86.dasc:4274: error: parse error before ')' token
+vm_x86.dasc:4274: error: parse error before ')' token
+vm_x86.dasc:4305: error: parse error before ')' token
+vm_x86.dasc:4305: error: parse error before ')' token
+vm_x86.dasc:4305: error: parse error before ')' token
+vm_x86.dasc:4305: error: parse error before ')' token
+vm_x86.dasc:4305: error: parse error before ')' token
+vm_x86.dasc:4334: error: parse error before ')' token
+vm_x86.dasc:4334: error: parse error before ')' token
+vm_x86.dasc:4369: error: parse error before ')' token
+vm_x86.dasc:4369: error: parse error before ')' token
+vm_x86.dasc:4369: error: parse error before ')' token
+vm_x86.dasc:4391: error: parse error before ')' token
+vm_x86.dasc:4391: error: parse error before ')' token
+vm_x86.dasc:4391: error: parse error before ')' token
+vm_x86.dasc:4391: error: parse error before ')' token
+vm_x86.dasc:4391: error: `uint8_t' undeclared (first use in this function)
+vm_x86.dasc:4391: error: parse error before '~' token
+vm_x86.dasc:4393: error: parse error before ')' token
+vm_x86.dasc:4393: error: parse error before ')' token
+vm_x86.dasc:4393: error: parse error before ')' token
+vm_x86.dasc:4393: error: parse error before ')' token
+vm_x86.dasc:4393: error: parse error before ')' token
+vm_x86.dasc:4393: error: parse error before ')' token
+vm_x86.dasc:4393: error: parse error before ')' token
+vm_x86.dasc:4416: error: parse error before ')' token
+vm_x86.dasc:4416: error: parse error before ')' token
+vm_x86.dasc:4416: error: parse error before ')' token
+vm_x86.dasc:4416: error: parse error before ')' token
+vm_x86.dasc:4416: error: parse error before ')' token
+vm_x86.dasc:4416: error: parse error before ')' token
+vm_x86.dasc:4448: error: parse error before ')' token
+vm_x86.dasc:4448: error: parse error before ')' token
+vm_x86.dasc:4448: error: parse error before ')' token
+vm_x86.dasc:4448: error: parse error before ')' token
+vm_x86.dasc:4448: error: parse error before ')' token
+vm_x86.dasc:4481: error: parse error before ')' token
+vm_x86.dasc:4481: error: parse error before ')' token
+vm_x86.dasc:4481: error: dereferencing pointer to incomplete type
+vm_x86.dasc:4481: error: dereferencing pointer to incomplete type
+vm_x86.dasc:4481: error: parse error before ')' token
+vm_x86.dasc:4481: error: parse error before '~' token
+vm_x86.dasc:4511: error: parse error before ')' token
+vm_x86.dasc:4511: error: parse error before ')' token
+vm_x86.dasc:4511: error: parse error before ')' token
+vm_x86.dasc:4511: error: parse error before ')' token
+vm_x86.dasc:4520: error: parse error before ')' token
+vm_x86.dasc:4520: error: parse error before ')' token
+vm_x86.dasc:4520: error: parse error before ')' token
+vm_x86.dasc:4520: error: parse error before '~' token
+vm_x86.dasc:4553: error: parse error before ')' token
+vm_x86.dasc:4553: error: parse error before ')' token
+vm_x86.dasc:4553: error: parse error before ')' token
+vm_x86.dasc:4553: error: parse error before ')' token
+vm_x86.dasc:4553: error: parse error before '~' token
+vm_x86.dasc:4611: error: parse error before ')' token
+vm_x86.dasc:4611: error: parse error before ')' token
+vm_x86.dasc:4611: error: parse error before ')' token
+vm_x86.dasc:4611: error: dereferencing pointer to incomplete type
+vm_x86.dasc:4611: error: dereferencing pointer to incomplete type
+vm_x86.dasc:4616: error: parse error before ')' token
+vm_x86.dasc:4616: error: parse error before '~' token
+vm_x86.dasc:4630: error: parse error before ')' token
+vm_x86.dasc:4676: error: parse error before ')' token
+vm_x86.dasc:4676: error: parse error before ')' token
+vm_x86.dasc:4698: error: parse error before ')' token
+vm_x86.dasc:4698: error: parse error before ')' token
+vm_x86.dasc:4727: error: parse error before ')' token
+vm_x86.dasc:4785: error: parse error before ')' token
+vm_x86.dasc:4785: error: parse error before ')' token
+vm_x86.dasc:4785: error: parse error before ')' token
+vm_x86.dasc:4810: error: parse error before ')' token
+vm_x86.dasc:4810: error: parse error before ')' token
+vm_x86.dasc:4810: error: parse error before ')' token
+vm_x86.dasc:4810: error: parse error before ')' token
+vm_x86.dasc:4810: error: parse error before ')' token
+vm_x86.dasc:4810: error: parse error before ')' token
+vm_x86.dasc:4829: error: parse error before ')' token
+vm_x86.dasc:4882: error: dereferencing pointer to incomplete type
+vm_x86.dasc:4912: error: dereferencing pointer to incomplete type
+vm_x86.dasc:4912: error: dereferencing pointer to incomplete type
+vm_x86.dasc:4912: error: dereferencing pointer to incomplete type
+vm_x86.dasc:4912: error: dereferencing pointer to incomplete type
+vm_x86.dasc:4985: error: parse error before ')' token
+vm_x86.dasc:4985: error: parse error before ')' token
+vm_x86.dasc:5018: error: parse error before ')' token
+vm_x86.dasc:5018: error: parse error before ')' token
+vm_x86.dasc:5161: error: parse error before ')' token
+vm_x86.dasc:5161: error: parse error before ')' token
+vm_x86.dasc:5195: error: parse error before ')' token
+vm_x86.dasc:5195: error: parse error before ')' token
+vm_x86.dasc:5249: error: parse error before ')' token
+vm_x86.dasc:5249: error: parse error before ')' token
+vm_x86.dasc:5249: error: parse error before ')' token
+vm_x86.dasc:5249: error: parse error before ')' token
+vm_x86.dasc:5249: error: parse error before ')' token
+vm_x86.dasc:5249: error: parse error before ')' token
+vm_x86.dasc:5249: error: parse error before ')' token
+vm_x86.dasc:5249: error: parse error before ')' token
+vm_x86.dasc:5249: error: parse error before ')' token
+vm_x86.dasc:5249: error: parse error before ')' token
+vm_x86.dasc:5270: error: parse error before ')' token
+vm_x86.dasc:5270: error: parse error before ')' token
+vm_x86.dasc:5289: error: parse error before ')' token
+vm_x86.dasc:5289: error: dereferencing pointer to incomplete type
+vm_x86.dasc:5289: error: parse error before ')' token
+vm_x86.dasc:5340: error: dereferencing pointer to incomplete type
+vm_x86.dasc:5340: error: parse error before ')' token
+vm_x86.dasc:5346: error: parse error before ')' token
+vm_x86.dasc:5367: error: parse error before ')' token
+vm_x86.dasc:5367: error: dereferencing pointer to incomplete type
+vm_x86.dasc:5367: error: dereferencing pointer to incomplete type
+vm_x86.dasc:5367: error: dereferencing pointer to incomplete type
+vm_x86.dasc:5384: error: parse error before ')' token
+vm_x86.dasc:5384: error: parse error before ')' token
+vm_x86.dasc:5384: error: parse error before ')' token
+vm_x86.dasc:5389: error: parse error before ')' token
+vm_x86.dasc:5389: error: parse error before ')' token
+vm_x86.dasc:5389: error: parse error before ')' token
+vm_x86.dasc:5399: error: dereferencing pointer to incomplete type
+vm_x86.dasc:5399: error: parse error before ')' token
+vm_x86.dasc:5399: error: parse error before ')' token
+vm_x86.dasc:5399: error: parse error before ')' token
+vm_x86.dasc:5399: error: parse error before ')' token
+vm_x86.dasc:5399: error: parse error before ')' token
+vm_x86.dasc:5399: error: parse error before ')' token
+vm_x86.dasc:5399: error: dereferencing pointer to incomplete type
+vm_x86.dasc: At top level:
+vm_x86.dasc:5410: error: parse error before '*' token
+vm_x86.dasc: In function `build_backend':
+vm_x86.dasc:5413: error: `ctx' undeclared (first use in this function)
+vm_x86.dasc: At top level:
+vm_x86.dasc:5422: error: parse error before '*' token
+vm_x86.dasc: In function `emit_asm_debug':
+vm_x86.dasc:5424: error: `uint8_t' undeclared (first use in this function)
+vm_x86.dasc:5424: error: parse error before ')' token
+vm_x86.dasc:5436: error: `ctx' undeclared (first use in this function)
+host/buildvm.c: At top level:
+host/buildvm.c:77: error: parse error before '*' token
+host/buildvm.c: In function `owrite':
+host/buildvm.c:79: error: `sz' undeclared (first use in this function)
+host/buildvm.c:79: error: `ctx' undeclared (first use in this function)
+host/buildvm.c:79: warning: passing arg 1 of `fwrite' makes pointer from integer without a cast
+host/buildvm.c: At top level:
+host/buildvm.c:89: error: parse error before '*' token
+host/buildvm.c: In function `emit_raw':
+host/buildvm.c:91: error: `ctx' undeclared (first use in this function)
+host/buildvm.c: At top level:
+host/buildvm.c:96: error: parse error before '*' token
+host/buildvm.c: In function `sym_decorate':
+host/buildvm.c:106: error: `ctx' undeclared (first use in this function)
+host/buildvm.c:108: error: `prefix' undeclared (first use in this function)
+host/buildvm.c:108: error: `suffix' undeclared (first use in this function)
+host/buildvm.c: At top level:
+host/buildvm.c:132: error: parse error before '*' token
+host/buildvm.c: In function `collect_reloc':
+host/buildvm.c:134: error: `ctx' undeclared (first use in this function)
+host/buildvm.c:143: error: `addr' undeclared (first use in this function)
+host/buildvm.c:145: error: `type' undeclared (first use in this function)
+host/buildvm.c: At top level:
+host/buildvm.c:155: error: parse error before '*' token
+host/buildvm.c: In function `sym_insert':
+host/buildvm.c:158: error: `ctx' undeclared (first use in this function)
+host/buildvm.c:160: error: `ofs' undeclared (first use in this function)
+host/buildvm.c:166: error: `prefix' undeclared (first use in this function)
+host/buildvm.c:166: error: `suffix' undeclared (first use in this function)
+host/buildvm.c: At top level:
+host/buildvm.c:170: error: parse error before '*' token
+host/buildvm.c: In function `build_code':
+host/buildvm.c:176: error: `ctx' undeclared (first use in this function)
+host/buildvm.c:200: error: `uint8_t' undeclared (first use in this function)
+host/buildvm.c:200: error: parse error before ')' token
+host/buildvm.c:231: error: parse error before ')' token
+host/buildvm.c: At top level:
+host/buildvm.c:306: error: parse error before '*' token
+host/buildvm.c: In function `emit_bcdef':
+host/buildvm.c:309: error: `ctx' undeclared (first use in this function)
+host/buildvm.c: At top level:
+host/buildvm.c:319: error: parse error before '*' token
+host/buildvm.c: In function `emit_vmdef':
+host/buildvm.c:323: error: `ctx' undeclared (first use in this function)
+host/buildvm.c: At top level:
+host/buildvm.c:396: error: parse error before '*' token
+host/buildvm.c: In function `parseargs':
+host/buildvm.c:400: error: `ctx' undeclared (first use in this function)
+host/buildvm.c:402: error: `argv' undeclared (first use in this function)
+host/buildvm.c: In function `main':
+host/buildvm.c:434: error: parse error before "ctx_"
+host/buildvm.c:435: error: `ctx' undeclared (first use in this function)
+host/buildvm.c:435: error: `ctx_' undeclared (first use in this function)
+./../dynasm/dasm_x86.h: In function `dasm_put':
+./../dynasm/dasm_x86.h:186: error: `va_start' used in function with fixed args
+host/buildvm.c: At top level:
+./lj_bc.h:262: warning: array 'lj_bc_mode' assumed to have one element
+./lj_bc.h:263: warning: array 'lj_bc_ofs' assumed to have one element
+./lj_ir.h:393: warning: array 'lj_ir_type_size' assumed to have one element
+./lj_obj.h:712: error: storage size of `th' isn't known
+make[1]: *** [host/buildvm.o] Error 1
+make[1]: Leaving directory `/c/ngx_openresty-1.9.7.2/build/LuaJIT-2.1-20160108/src'
+make: *** [default] Error 2
+ERROR: failed to run command: make TARGET_STRIP=@: CCDEBUG=-g XCFLAGS='-std=gnu99' CC='gcc' PREFIX=/usr/local/openresty/luajit
+
+
